@@ -1,0 +1,51 @@
+version: '3.5'
+
+networks:
+    frontend-network:
+        external:
+            name: '${FRONTEND_NETWORK_NAME}'
+    backend-network:
+        external:
+            name: '${BACKEND_NETWORK_NAME}'
+
+services:
+    # Nextjs applicaton container
+    &app-service app:
+        image: git.chulakov.org:5555/product/vertical/vertical.frontend.next/app-next:stage
+        logging:
+            driver: 'json-file'
+            options:
+                max-file: '2'
+                max-size: '5m'
+        container_name: ${COMPOSE_PROJECT_NAME}-app
+        restart: always
+        environment:
+            CLIENT_API_URL: '${CLIENT_API_URL}'
+            SSR_API_URL: '${SSR_API_URL}'
+            PORT: &nodejs-port 3000
+            HOST_URL: '${HOST_URL}'
+        working_dir: '/app'
+        networks:
+            - backend-network
+
+    # NGINX container with proxy
+    nginx-app:
+        image: git.chulakov.org:5555/product/vertical/vertical.frontend.next/nginx-next:stage
+        logging:
+            driver: 'json-file'
+            options:
+                max-file: '2'
+                max-size: '5m'
+        container_name: ${COMPOSE_PROJECT_NAME}-nginx
+        restart: always
+        depends_on:
+            - *app-service
+        environment:
+            REMOTE_HOST: ${COMPOSE_PROJECT_NAME}-app
+            REMOTE_PORT: *nodejs-port
+            ROOT_DIR: '/app'
+            VIRTUAL_HOST: '${COMPOSE_PROJECT_NAME}'
+            LETSENCRYPT_HOST: '${COMPOSE_PROJECT_NAME}'
+        networks:
+            - backend-network
+            - frontend-network

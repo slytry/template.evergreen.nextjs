@@ -1,0 +1,179 @@
+{
+	"categories": [
+		{
+			"title": "Автотовары",
+			"slug": "auto"
+		},
+		{
+			"title": "Автохимия и автокосметика",
+			"slug": "auto-and-autostul"
+		},
+		{
+			"title": "Мовиль",
+			"slug": "movil"
+		}
+	],
+	"brand": {
+		"title": "BRAND",
+		"slug": ""
+	},
+	"title": "Активная пена Grass Active foam pink для бесконтактной мойки 6 кг",
+	"rating": 4.67,
+	"favorite": true,
+	"compare": false,
+	"vendorCode": "51370",
+	"productCode": "123456",
+	"reviewsCount": 8,
+	"images": [
+		{
+			"src": "https://path.to/file/slide01.png",
+			"src2x": "https://path.to/file/slide01x2.png",
+			"srcWebp": "https://path.to/file/slide01.webp",
+			"srcWebp2x": "https://path.to/file/slide01x2.webp",
+			"preview": "https://path.to/file/slide01_preview.png"
+		}
+	],
+	"tags": [
+		{
+			"icon": "fire",
+			"label": "Акции",
+			"description": "",
+			"link": {
+				"type": "link",
+				"link": "https://some.site",
+				"slug": null
+			},
+			"color": "#002200",
+			"background": "#001100"
+		}
+	],
+	"purchase": {
+		"price": 2587,
+		"sale": 2487,
+		"quantity": {
+			"min": 12,
+			"package": 12,
+			"available": 120
+		},
+		"sales": [
+			{
+				"sum": 10000,
+				"price": 2200
+			},
+			{
+				"sum": 50000,
+				"price": 2134
+			}
+		]
+	},
+	"variants": [
+		{
+			"title": "",
+			"slug": "",
+			"rating": 4.67,
+			"favorite": true,
+			"compare": false,
+			"vendorCode": "51370",
+			"productCode": "123456",
+			"images": [
+				{
+					"src": "https://path.to/file/slide01.png",
+					"src2x": "https://path.to/file/slide01x2.png",
+					"srcWebp": "https://path.to/file/slide01.webp",
+					"srcWebp2x": "https://path.to/file/slide01x2.webp",
+					"preview": "https://path.to/file/slide01_preview.png"
+				},
+				{
+					"src": "https://path.to/file/slide01.png",
+					"src2x": "https://path.to/file/slide01x2.png",
+					"srcWebp": "https://path.to/file/slide01.webp",
+					"srcWebp2x": "https://path.to/file/slide01x2.webp",
+					"preview": "https://path.to/file/slide01_preview.png"
+				},
+				{
+					"src": "https://path.to/file/slide01.png",
+					"src2x": "https://path.to/file/slide01x2.png",
+					"srcWebp": "https://path.to/file/slide01.webp",
+					"srcWebp2x": "https://path.to/file/slide01x2.webp",
+					"preview": "https://path.to/file/slide01_preview.png"
+				}
+			],
+			"tags": [
+				{
+					"icon": "fire",
+					"label": "Акции",
+					"description": "",
+					"link": {
+						"type": "link",
+						"link": "https://some.site",
+						"slug": null
+					},
+					"color": "#002200",
+					"background": "#001100"
+				}
+			],
+			"purchase": {
+				"price": 2587,
+				"sale": 2487,
+				"package": 25587,
+				"sizes": {
+					"min": 12,
+					"package": 12,
+					"available": 120
+				},
+				"sales": [
+					{
+						"sum": 10000,
+						"price": 2200
+					},
+					{
+						"sum": 50000,
+						"price": 2134
+					}
+				]
+			},
+			"attributes": [
+				{
+					"name": "ajsnkjaskcjas",
+					"label": "Объем",
+					"type": "string",
+					"value": "2,5",
+					"additional": null
+				},
+				{
+					"name": "njakscnjiask",
+					"label": "Цвет",
+					"type": "color",
+					"value": "Ваниль",
+					"additional": {
+						"color": "#002200"
+					}
+				}
+			]
+		}
+	],
+	"attributes": [
+		{
+			"name": "asccqwasxaca",
+			"label": "Тип товара",
+			"type": "string",
+			"value": "Активная пена"
+		},
+		{
+			"name": "vdsfvsdvsdc",
+			"label": "Бренд",
+			"type": "string",
+			"value": "Grass"
+		}
+	],
+	"content": "<p>Описание товара</p>",
+	"application": "<p>Область применения</p>",
+	"certificates": [
+		{
+			"type": "pdf",
+			"name": "Документ",
+			"size": 2834781,
+			"path": "https://path.to/file.pdf"
+		}
+	]
+}

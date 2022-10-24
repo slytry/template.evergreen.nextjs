@@ -1,0 +1,10 @@
+.TopSales {
+	@include container;
+	padding-bottom: 44px;
+	overflow: unset;
+
+	&__title {
+		margin: 0 0 22px;
+		@include headingH1;
+	}
+}

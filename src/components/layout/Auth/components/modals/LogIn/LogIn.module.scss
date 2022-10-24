@@ -1,0 +1,11 @@
+.LogIn {
+	&__enter-button {
+		margin-bottom: 24px;
+	}
+	&__account-recovery {
+		@include text3($c-gray);
+		align-self: end;
+		margin-bottom: 32px;
+		padding: 0;
+	}
+}

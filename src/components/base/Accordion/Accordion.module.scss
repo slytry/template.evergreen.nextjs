@@ -1,0 +1,32 @@
+.Accordion__button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	width: 100%;
+}
+
+.Accordion__chevron {
+	transform: rotate(-90deg);
+	@include transition(transform);
+
+	&--open {
+		transform: rotate(90deg);
+	}
+}
+
+.Accordion__content {
+	visibility: hidden;
+	opacity: 0;
+	@include transition(height, opacity, visibility);
+	height: 0;
+	overflow: hidden;
+
+	&--open {
+		visibility: visible;
+		opacity: 1;
+	}
+}

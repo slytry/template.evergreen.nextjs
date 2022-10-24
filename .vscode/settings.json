@@ -1,0 +1,29 @@
+{
+	"files.exclude": {
+		"**/.DS_Store": true,
+		"**/._.DS_Store": true,
+		"**/node_modules": false,
+		"**/.next": true,
+		"**/.git": true
+	},
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/docker": true
+	},
+
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.format": true
+	},
+	"debug.javascript.unmapMissingSources": true,
+
+	"eslint.workingDirectories": ["./src"],
+	"prettier.configPath": "./src/.prettierrc",
+	"eslint.alwaysShowStatus": true,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}

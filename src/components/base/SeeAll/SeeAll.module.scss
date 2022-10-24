@@ -1,0 +1,27 @@
+.SeeAll {
+	@include flex-c;
+	@include text3;
+	gap: 6px;
+	background: transparent;
+	padding: 0;
+
+	color: $c-mainBlue;
+
+	&:hover {
+		color: $c-hoverBlue;
+	}
+
+	&:active {
+		color: $c-activeBlue;
+	}
+	&:active {
+		color: $c-gray;
+	}
+}
+
+.SeeAll__arrow {
+	transform: rotate(180deg);
+	&--open {
+		transform: rotate(90deg);
+	}
+}

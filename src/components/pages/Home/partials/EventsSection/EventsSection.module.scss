@@ -1,0 +1,23 @@
+.EventsSection {
+	padding: 64px 0;
+
+	&__title {
+		@include headingH1;
+	}
+
+	&__container {
+		@include container;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__title-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 32px;
+	}
+}

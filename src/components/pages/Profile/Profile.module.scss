@@ -1,0 +1,23 @@
+.Profile {
+	&__heading {
+		margin-bottom: rem(32);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+		@include respond-above(1170px) {
+			flex-direction: row;
+		}
+	}
+
+	&__data {
+		flex-grow: 1;
+		max-width: 630px;
+	}
+	&__subscriptions {
+		min-width: 340px;
+		max-width: 630px;
+	}
+}

@@ -1,0 +1,11 @@
+.ModalWithTabs {
+	&__logo {
+		color: $c-dark;
+	}
+
+	&__logo-container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 16px;
+	}
+}

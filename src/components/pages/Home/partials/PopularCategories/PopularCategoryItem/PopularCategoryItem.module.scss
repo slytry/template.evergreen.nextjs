@@ -1,0 +1,15 @@
+.PopularCategoryItem {
+	flex-grow: 0;
+	flex-shrink: 0;
+	max-width: 197px;
+}
+
+.PopularCategoryItem__image {
+	margin-bottom: 12px;
+}
+
+.PopularCategoryItem__link {
+	@include text3;
+	font-weight: 500;
+	text-align: center;
+}

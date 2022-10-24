@@ -1,0 +1,40 @@
+.ActionButton {
+	cursor: pointer;
+	outline: none;
+	background: none;
+	@include caption;
+}
+
+.focusRing {
+	@include focusRing;
+}
+
+.ActionButton--blue {
+	@include text3($c-mainBlue);
+
+	&.isHovered {
+		color: $c-hoverBlue;
+	}
+
+	&.isPressed {
+		color: $c-activeBlue;
+	}
+
+	&.isDisabled {
+		color: $c-gray;
+	}
+}
+
+.ActionButton--dark {
+	&.isHovered {
+		color: $c-hoverRed;
+	}
+
+	&.isPressed {
+		color: $c-activeRed;
+	}
+
+	&.isDisabled {
+		color: $c-gray;
+	}
+}

@@ -1,0 +1,24 @@
+.Baner {
+	border-radius: 20px;
+	background-image: url('/images/baner/banerBg.png');
+	background-position: 0 bottom;
+	background-repeat: no-repeat;
+	background-color: #f9f9ff;
+	padding: 32px;
+	width: 305px;
+	height: 360px;
+}
+
+.Baner__heading {
+	@include headingH2;
+	margin-bottom: 4px;
+	font-size: 23px;
+}
+.Baner__text {
+	@include text3;
+	margin-bottom: 30px;
+}
+.Baner__img {
+	position: relative;
+	left: 15px;
+}

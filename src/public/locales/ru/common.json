@@ -1,0 +1,65 @@
+{
+	"exit-btn": "Выйти",
+	"change": "Изменить",
+	"retail-clients": "Розничным клиентам",
+	"whole-clients": "Оптовым клиентам",
+	"send-request": "Отправить запрос",
+	"catalog": "Каталог",
+	"search-goods": "Искать товары",
+	"personal-account": "Личный кабинет",
+	"change-data": "Изменить данные",
+	"lkMenu": [
+		{
+			"title": "Управление",
+			"link": "/lk/management"
+		},
+		{
+			"title": "Мои организации",
+			"link": "/lk/organizations"
+		},
+		{
+			"title": "Мои сотрудники",
+			"link": "/lk/employees"
+		},
+		{
+			"title": "Взаиморасчеты",
+			"link": "/lk/settlements"
+		},
+		{
+			"title": "Заказы",
+			"link": "/lk/orders"
+		},
+		{
+			"title": "Избранное",
+			"link": "/lk/favorites"
+		},
+		{
+			"title": "Возвраты",
+			"link": "/lk/refunds"
+		},
+		{
+			"title": "Мои документы",
+			"link": "/lk/documents"
+		},
+		{
+			"title": "Предложения",
+			"link": "/lk/offers"
+		},
+		{
+			"title": "Бонусная программа",
+			"link": "/lk/bonus"
+		},
+		{
+			"title": "Notifications",
+			"link": "/lk/notifications"
+		},
+		{
+			"title": "Сообщения",
+			"link": "/lk/messages"
+		},
+		{
+			"title": "Помощь",
+			"link": "/lk/help"
+		}
+	]
+}

@@ -1,0 +1,15 @@
+@use 'mixins/typo' as *;
+
+.Heading {
+	&--level1 {
+		@include headingH1;
+	}
+
+	&--level2 {
+		@include headingH2;
+	}
+
+	&--level3 {
+		@include headingH3;
+	}
+}

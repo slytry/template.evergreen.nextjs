@@ -1,0 +1,32 @@
+.LkLayout {
+	padding-block: rem(24) rem(68);
+	width: 100%;
+	@include container;
+
+	&__breadcrumbs {
+		margin-bottom: rem(48);
+	}
+
+	&__grid {
+		display: flex;
+		gap: rem(40);
+	}
+	&__left-bar {
+		min-width: 173px;
+		@include respond-below(980px) {
+			display: none;
+		}
+	}
+
+	&__main {
+		width: 100%;
+	}
+
+	& &__exit-button {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		margin-top: rem(24);
+		color: $c-gray;
+	}
+}

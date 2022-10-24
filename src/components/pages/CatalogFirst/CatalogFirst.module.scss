@@ -1,0 +1,29 @@
+.CatalogFirst {
+	@include container;
+}
+
+.CatalogFirst__breadcrumbs {
+	padding-top: 32px;
+	padding-bottom: 56px;
+}
+
+.CatalogFirst__wrapper {
+	display: flex;
+	min-height: 100vh;
+}
+
+.CatalogFirst__mainContent {
+	width: 100%;
+}
+
+.CatalogFirst__heading {
+	margin-bottom: 24px;
+}
+
+.CatalogFirst__seAll {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 76px;
+	width: 221px;
+	font-weight: 500;
+}

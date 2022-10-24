@@ -1,0 +1,66 @@
+{
+	"exit-btn": "Exit",
+	"change": "Change",
+	"retail-clients": "Retail clients",
+	"whole-clients": "Wholesale clients",
+	"send-request": "Send request",
+	"catalog": "Catalog",
+	"search-goods": "Search for products",
+	"personal-account": "Personal cabinet",
+	"change-data": "Change data",
+	"errors": {
+		"unspecific": "Something went wrong.",
+		"404": "The page was not found.",
+		"anyRequest": "Error in processing request. Error text: {{value}}"
+	},
+	"lkMenu": [
+		{
+			"title": "Management",
+			"link": "/lk/management"
+		},
+		{
+			"title": "My organizations",
+			"link": "/lk/organizations"
+		},
+		{
+			"title": "My employees",
+			"link": "/lk/employees"
+		},
+		{
+			"title": "Mutual settlements",
+			"link": "/lk/settlements"
+		},
+		{
+			"title": "Orders",
+			"link": "/lk/orders"
+		},
+		{
+			"title": "Favorites",
+			"link": "/lk/favorites"
+		},
+		{
+			"title": "Refunds",
+			"link": "/lk/refunds"
+		},
+		{
+			"title": "My documents",
+			"link": "/lk/documents"
+		},
+		{
+			"title": "Offers",
+			"link": "/lk/offers"
+		},
+		{
+			"title": "Bonus program",
+			"link": "/lk/bonus"
+		},
+		{
+			"title": "Messages",
+			"link": "/lk/messages"
+		},
+		{
+			"title": "Help",
+			"link": "/lk/help"
+		}
+	]
+}

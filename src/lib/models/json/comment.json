@@ -1,0 +1,66 @@
+{
+    "total": 12,
+    "rating": 4.7,
+    "ratings": [
+        {
+            "rating": 5,
+            "count": 8
+        },
+        {
+            "rating": 4,
+            "count": 22
+        },
+        {
+            "rating": 3,
+            "count": 3
+        },
+        {
+            "rating": 2,
+            "count": 3
+        },
+        {
+            "rating": 1,
+            "count": 1
+        }
+    ],
+    "items": [
+        {
+            "id": "uuid",
+            "author": {
+                "id": "uuid",
+                "name": "Алексей П.",
+                "photo": null
+            },
+            "rating": 4,
+            "reaction": {
+                "type": "like|dislike|none",
+                "likes": 2,
+                "dislikes": 0
+            },
+            "date": "1970-01-01T00:00:00:000z",
+            "comment": "Отличное масло для дерева. Масло белого цвета мало представлено на нашем рынке.",
+            "merit": "масло для дерева по приемлимой цене",
+            "demerit": "сохнет сутки при нанесении в растирку",
+            "attributes": [
+                {
+                    "name": "asccqwasxaca",
+                    "label": "Тип товара",
+                    "type": "string",
+                    "value": "Активная пена"
+                },
+                {
+                    "name": "vdsfvsdvsdc",
+                    "label": "Бренд",
+                    "type": "string",
+                    "value": "Grass"
+                }
+            ],
+            "photos": [
+                {
+                    "preview": "https://path.to/upload.jpeg",
+                    "src": "https://path.to/upload.jpeg"
+                }
+            ]
+        }
+    ]
+}

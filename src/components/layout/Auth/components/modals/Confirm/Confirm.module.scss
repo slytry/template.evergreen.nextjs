@@ -1,0 +1,22 @@
+.Confirm {
+	&__heading {
+		margin-bottom: rem(12);
+		color: $c-black;
+		text-align: center;
+	}
+
+	&__content {
+		text-align: center;
+		@include text3;
+		margin-bottom: rem(4);
+	}
+
+	&__inputs {
+		margin-block: rem(24);
+	}
+
+	&__enter-button {
+		align-self: stretch;
+		margin-bottom: rem(24);
+	}
+}

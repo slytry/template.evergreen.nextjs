@@ -1,0 +1,74 @@
+.Checkbox {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.Checkbox__input {
+	@include v-hidden;
+}
+
+.Checkbox__svg {
+	margin-right: 4px;
+	width: 30px;
+	height: 30px;
+}
+
+.Checkbox__mainRect {
+	stroke-width: 1;
+	fill: none;
+	stroke: $c-grayLines;
+	width: 22px;
+	height: 22px;
+
+	&--checked {
+		fill: $c-mainRed;
+		stroke: $c-mainRed;
+	}
+
+	&--hover {
+		stroke: $c-hoverRed;
+	}
+
+	&--disabled {
+		fill: $c-disabled;
+		stroke: $c-disabled;
+	}
+}
+
+.Checkbox__checkMark {
+	fill: none;
+	transform: translate(6.5px, 6.5px);
+	opacity: 0;
+	width: 12px;
+	height: 12px;
+
+	&--checked {
+		opacity: 1;
+	}
+}
+
+.Checkbox__arrow {
+	stroke: $c-white;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.375;
+
+	&--disabled {
+		stroke: $c-dark;
+	}
+}
+
+.Checkbox__focusVisible {
+	stroke: $c-hoverRed;
+	fill: none;
+	stroke-width: 2;
+	opacity: 0;
+
+	width: 28px;
+	height: 28px;
+
+	&--inFocus {
+		opacity: 1;
+	}
+}

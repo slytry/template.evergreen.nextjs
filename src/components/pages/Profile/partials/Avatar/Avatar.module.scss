@@ -1,0 +1,23 @@
+.Avatar {
+	display: flex;
+	gap: rem(8);
+	border-bottom: 1px solid rgba(224, 224, 224, 0.7);
+	padding-bottom: rem(20);
+	&__thaumb {
+		@include centering;
+		@include caption($c-mainRed);
+		border-radius: 50%;
+		background-color: $c-secondaryPink;
+		width: rem(42);
+		height: rem(42);
+		line-height: 1.5;
+	}
+	&__name {
+		@include text-shorten;
+		@include headingH3;
+		font-size: $fs-16;
+	}
+	&__change-profile {
+		color: $c-gray;
+	}
+}

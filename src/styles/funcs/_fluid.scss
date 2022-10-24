@@ -1,0 +1,57 @@
+@use 'sass:math';
+@use './utils' as *;
+
+//
+// TODO: надо разобраться более детально как работает эта ф-я. Чтобы можно было ее модифицировать
+// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+// А модифицировать ее надо:
+// - если мы задаем gap лучше делать это в vmax, % зависят от направления, то есть row и column gap могут разниться
+//  а wv может плохо рабоать на планшетах, отступ будет слишком большой, чтобы не делать медиа запросов на aspect-ratio можно использовать vmax/vmin
+// - если мы задаем вертикальные отсупы, то их хотелось бы делать в Vh, ладно если это паддинги по круку, пусть будут от vw
+// Но если это margin для отступа между блоками можно его сделать от vh, это как раз решит проблему со слишком большыми отступами на планшете
+// ---
+// временное решение на тупого: пока не понимаю как считается значение. Просто поменяю еденицы измерения на нужные и буду тестировать.
+//
+
+/*
+Функция принимает минимальное и максимальное значение в пикселях. И предельные ширины экрана, между которыми размер будет линейно изменяться в замивисости от ширины. При выходу за эти границы применяться заданные значения
+*/
+@function fluid($minSize, $maxSize, $units: 'vw', $minWidth: 375, $maxWidth: 1440) {
+	// convert to rem
+	$minSize: math.div($minSize, 16);
+	$maxSize: math.div($maxSize, 16);
+	$maxWidth: math.div($maxWidth, 16);
+	$minWidth: math.div($minWidth, 16);
+	// do calculations
+	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+	$yAxisIntersection: -$minWidth * $slope + $minSize;
+	$preferredValue: '#{decimal-round($yAxisIntersection,3)}rem + #{decimal-round(($slope*100),3) }#{$units}';
+	// output as rem
+	$minSize: decimal-round($minSize, 3) * 1rem;
+	$maxSize: decimal-round($maxSize, 3) * 1rem;
+	@return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
+}
+
+// @function fluidVmax($minSize, $maxSize, $minWidth: 375, $maxWidth: 1440) {
+// 	// convert to rem
+// 	$minSize: math.div($minSize, 16);
+// 	$maxSize: math.div($maxSize, 16);
+// 	$maxWidth: math.div($maxWidth, 16);
+// 	$minWidth: math.div($minWidth, 16);
+// 	// do calculations
+// 	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+// 	$yAxisIntersection: -$minWidth * $slope + $minSize;
+// 	$preferredValue: '#{decimal-round($yAxisIntersection,3)}rem + #{decimal-round(($slope*100),3) }vmax';
+// 	// output as rem
+// 	$minSize: decimal-round($minSize, 3) * 1rem;
+// 	$maxSize: decimal-round($maxSize, 3) * 1rem;
+// 	@return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
+// }
+
+//Карианный калькулятор relative viewport = rel
+
+@function rel($value, $size: 1440) {
+	$slope: math.div($value, $size);
+
+	@return $slope * 100;
+}

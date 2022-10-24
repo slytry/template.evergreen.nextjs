@@ -1,0 +1,23 @@
+.Thumb {
+	position: absolute;
+	top: 50%;
+}
+
+.Thumb__container {
+	border: 2px solid;
+	border-color: $c-white;
+	border-radius: 50%;
+	background-color: $c-mainRed;
+	width: 20px;
+	height: 20px;
+	&--focus {
+		border-color: $c-dark;
+	}
+	&--dragging {
+		background-color: $c-hoverRed;
+	}
+}
+
+.Thumb__input {
+	@include v-hidden;
+}

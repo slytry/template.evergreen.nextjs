@@ -1,0 +1,38 @@
+@use '../Fields.module.scss' as *;
+
+.TextFieldBase {
+	@extend .field;
+	margin-bottom: 16px;
+}
+
+.TextFieldBase__label {
+	@extend .label;
+}
+
+.TextFieldBase__label.is-filled,
+.TextFieldBase__label.is-focused {
+	transform: $labelUpAnimation;
+}
+
+.TextFieldBase__input {
+	@extend .input;
+	&--invalid {
+		border-color: #de0735;
+	}
+
+	&--isReadOnly {
+		border: 1px dashed #e0e0e0;
+	}
+}
+
+.TextFieldBase__input.is-focusVisible {
+	@include focusRing;
+}
+
+.TextFieldBase__error {
+	@extend .error;
+}
+
+.is-label-hidden {
+	@include v-hidden;
+}

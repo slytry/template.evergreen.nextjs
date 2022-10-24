@@ -1,0 +1,21 @@
+.Menu {
+	border-bottom: 1px solid rgba(224, 224, 224, 0.7);
+	padding-block: rem(24);
+	width: 100%;
+	&__list {
+		@include caption;
+	}
+
+	&__list-item:not(:last-child) {
+		margin-bottom: rem(16);
+	}
+}
+
+.Menu__link {
+	border-radius: rem(8);
+	padding: rem(6) rem(12);
+}
+
+.Menu__link--active {
+	background: $c-grayBtn;
+}

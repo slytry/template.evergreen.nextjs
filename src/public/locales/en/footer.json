@@ -1,0 +1,47 @@
+{
+	"for-clients": {
+		"title": "For clients",
+		"links": [
+			"Delivery",
+			"Payment",
+			"Return of goods",
+			"Tinting",
+			"Bonus program",
+			"Offer"
+		]
+	},
+
+	"menu": {
+		"title": "Menu",
+		"links": ["Promotion", "News", "The shops", "About", "Job", "Contacts"]
+	},
+
+	"catalog": {
+		"title": "Catalog",
+		"links": [
+			"Automotive products",
+			"Tool",
+			"Cosmetics and care",
+			"Electrics and ventilation",
+			"House and cottage",
+			"Fasteners and accessories"
+		]
+	},
+
+	"more-catalog": {
+		"title": "",
+		"links": [
+			"Garden",
+			"Household chemicals",
+			"Adhesives and sealants",
+			"Plumbing and water supply",
+			"Household appliances",
+			"Paint and varnish materials"
+		]
+	},
+
+	"feedback": "Feedback",
+	"time": "9:00-22:00, daily (Moscow time)",
+	"privacy-policy": "Privacy policy",
+	"made-by": "Made by Oleg Chulakov Studio"
+}

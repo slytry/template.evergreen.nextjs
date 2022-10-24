@@ -1,0 +1,158 @@
+.ProductCard {
+	position: relative;
+	flex-shrink: 0;
+
+	cursor: pointer;
+	width: 100%;
+	max-width: 305px;
+	min-height: 428px;
+	max-height: 525px;
+
+	&:hover {
+		z-index: 1;
+		.ProductCard__actions,
+		.ProductCard__info {
+			opacity: 1;
+		}
+
+		.ProductCard__wrapper {
+			box-shadow: 0px 0px 16px rgba(161, 167, 178, 0.2);
+		}
+
+		.ProductCard__divider-wrapper {
+			opacity: 1;
+			margin-bottom: 12px;
+		}
+
+		.ProductCard__title {
+			display: block;
+			margin: 20px 0;
+		}
+	}
+
+	&__actions {
+		position: absolute;
+		top: 20px;
+		right: 28px;
+		opacity: 0;
+		@include transition(opacity);
+	}
+
+	&__rating {
+		@include smallText;
+	}
+
+	&__action-image {
+		color: $c-gray;
+	}
+
+	&__wrapper {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		flex-direction: column;
+		@include transition(box-shadow);
+
+		border-radius: 20px;
+		background-color: $c-white;
+		padding: 46px 28px 20px 28px;
+		width: 100%;
+
+		min-height: 100%;
+	}
+
+	&__divider-wrapper {
+		opacity: 0;
+		@include transition(opacity, margin-bottom);
+	}
+
+	&__divider-title {
+		@include smallText($c-gray);
+		padding-bottom: 8px;
+	}
+
+	&__divider {
+		background-color: $c-grayLines;
+		height: 1px;
+	}
+
+	&__title {
+		@include text3;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		@include transition(margin);
+		max-width: 245px;
+		-webkit-line-clamp: 2; // количество строк
+		overflow: hidden;
+	}
+
+	&__info {
+		display: flex;
+		position: absolute;
+		bottom: -16px;
+		left: 0;
+		justify-content: space-between;
+		align-items: center;
+		opacity: 0;
+		@include transition(opacity);
+		width: 100%;
+	}
+
+	&__image-wrapper {
+		position: relative;
+	}
+
+	&__rating-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__rating-wrapper {
+		gap: 4px;
+	}
+
+	&__article-wrapper {
+		@include smallText($c-gray);
+	}
+
+	&__alerts {
+		display: flex;
+		position: absolute;
+		top: 20px;
+		left: 25px;
+		gap: 10px;
+	}
+
+	&__bottom-block {
+		margin-top: auto;
+	}
+
+	&__price {
+		color: $c-dark;
+		font-weight: 500;
+		font-size: 23px;
+		line-height: 1.4;
+	}
+
+	&__packagingPrice {
+		@include text3;
+		margin-bottom: 16px;
+	}
+
+	&__alert-wrapper {
+		display: flex;
+		border-radius: 6px;
+		padding: 4px 8px;
+
+		&--green {
+			background-color: rgba($c-green, 0.12);
+			@include smallText($c-green);
+		}
+
+		&--orange {
+			background-color: rgba($c-orange, 0.1);
+			@include smallText($c-orange);
+		}
+	}
+}

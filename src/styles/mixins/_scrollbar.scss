@@ -1,0 +1,20 @@
+@use 'vars/colors' as *;
+
+%scrollbar {
+	$inner-size: 2px;
+	$border-width: 7px;
+	&::-webkit-scrollbar {
+		width: $inner-size + $border-width * 2;
+	}
+	&::-webkit-scrollbar-thumb {
+		position: relative;
+		border: $border-width solid $c-white;
+		border-top: none;
+		border-bottom: none;
+		border-radius: 8px;
+		background-color: black;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+}

@@ -1,0 +1,41 @@
+.Registration {
+	&__step {
+		text-align: center;
+		@include text3();
+		margin-bottom: 24px;
+	}
+
+	&__enter {
+		margin-top: 16px;
+	}
+
+	&__offer,
+	&__pass {
+		@include caption($c-gray);
+	}
+
+	&__pass {
+		display: inline-block;
+
+		padding-left: 4px;
+	}
+
+	&__offer {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	&__companyNameField {
+		border: 1px dashed #e0e0e0;
+	}
+}
+
+.TextFieldWithHelp {
+	&__link {
+		color: $c-mainBlue;
+
+		&:hover {
+			color: $c-hoverBlue;
+		}
+	}
+}

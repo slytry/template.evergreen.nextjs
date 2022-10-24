@@ -1,0 +1,46 @@
+.VerifyCode {
+	width: 100%;
+
+	&__inputs {
+		justify-content: center;
+	}
+	&__error {
+		@include caption($c-mainRed);
+		padding-top: 8px;
+		font-size: 0.875rem;
+		text-align: center;
+	}
+	&__button {
+		margin-top: rem(24);
+		width: 100%;
+	}
+}
+
+.InputCode {
+	display: flex;
+	justify-content: center;
+	gap: rem(12);
+
+	&__input {
+		outline: 0;
+		border: 0;
+		border-radius: $radius-8;
+		background: $c-grayBg;
+		width: rem(52);
+		height: rem(60);
+
+		color: #242424;
+		font-weight: 400;
+		font-size: rem(21);
+		line-height: 1.5;
+
+		text-align: center;
+		&:focus-visible {
+			@include focusRing;
+		}
+
+		&--error {
+			border: 1px solid $c-mainRed;
+		}
+	}
+}

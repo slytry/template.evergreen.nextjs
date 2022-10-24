@@ -1,0 +1,21 @@
+.catalogMenu {
+	position: absolute;
+	top: 161px;
+	left: 0;
+	background-color: #fff;
+	width: 100vw;
+	min-height: calc(100vh - 161px);
+}
+
+.catalogMenu__container {
+	@include container;
+	display: flex;
+	position: relative;
+}
+
+.catalogMenu__rightSideWrapper {
+	padding-left: 37px;
+}
+.catalogMenu__currentCategoriesWrapper {
+	display: flex;
+}

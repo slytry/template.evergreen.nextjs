@@ -1,0 +1,52 @@
+.CatalogAllLevel {
+	@include container;
+	padding-top: 24px;
+	padding-bottom: 48px;
+}
+
+.CatalogAllLevel__breadcrumbs {
+	margin-bottom: 32px;
+}
+
+.CatalogAllLevel__heading {
+	margin-bottom: 32px;
+}
+
+.CatalogAllLevel__contentWrapper {
+	display: flex;
+	column-gap: 55px;
+	margin-bottom: 48px;
+	min-height: 500px;
+}
+
+.CatalogAllLevel__aside {
+	padding-top: 32px;
+	min-width: 270px;
+	@include transition(transform, visibility);
+}
+.CatalogAllLevel__aside--hidden {
+	position: absolute;
+	transform: translateX(-100%);
+	opacity: 0;
+}
+
+.CatalogAllLevel__cards {
+	flex: 1;
+	border-top: 1px solid $c-grayLines;
+	@include transition(all);
+	padding-top: 32px;
+}
+
+.CatalogAllLevel__pagination {
+	display: flex;
+	justify-content: center;
+	background-color: rgb(215, 175, 239);
+}
+
+.CatalogAllLevel__cardsWrapper {
+	display: flex;
+	flex-flow: row wrap;
+	&--horizontal {
+		flex-flow: column nowrap;
+	}
+}

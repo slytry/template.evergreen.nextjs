@@ -1,0 +1,23 @@
+@use '../funcs/fluid' as *;
+@use '../funcs/utils' as *;
+$fontFamily: 'Inter', sans-serif;
+
+// $fs-12: fluid(9, 12);
+// $fs-14: fluid(11, 14);
+// $fs-16: fluid(13, 16);
+// $fs-18: fluid(15, 18);
+// $fs-21: fluid(18, 21);
+// $fs-23: fluid(20, 23);
+// $fs-26: fluid(23, 26);
+// $fs-28: fluid(25, 28);
+
+// static
+$fs-12: rem(12);
+$fs-14: rem(14);
+$fs-16: rem(16);
+$fs-18: rem(18);
+$fs-21: rem(21);
+$fs-23: rem(23);
+$fs-26: rem(26);
+$fs-28: rem(28);
+$fs-34: rem(34);

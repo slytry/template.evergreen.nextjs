@@ -1,0 +1,25 @@
+.BreadcrumbItem {
+	display: flex;
+	align-items: center;
+
+	&::after {
+		transform: rotate(180deg);
+		mask: url('/icons/common/arrow-left.svg') no-repeat center center;
+		background-color: $c-gray;
+		padding: 0 12px;
+		height: 8px;
+		content: '';
+	}
+
+	&--current::after {
+		display: none;
+	}
+}
+
+.BreadcrumbItem__text {
+	@include text3($c-gray);
+	&--current {
+		cursor: default;
+		color: $c-dark;
+	}
+}

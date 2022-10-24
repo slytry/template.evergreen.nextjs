@@ -1,0 +1,110 @@
+.Blog {
+	background-color: $c-grayBg;
+}
+
+.Blog__container {
+	@include container;
+
+	display: flex;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.Blog__articles {
+	flex-grow: 1;
+	border-right: 1px solid $c-grayLines;
+
+	padding-right: 36px;
+}
+
+.Blog__heading-bar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 32px;
+}
+
+.Blog__article-heading,
+.Blog__tutorial-heading {
+	@include headingH1;
+}
+
+.Blog__show-more {
+	display: flex;
+	align-items: center;
+}
+
+.Blog__show-more-text {
+	margin-right: 6px;
+	@include text3;
+}
+
+.Blog__articles-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.Blog__article-item {
+	max-width: 288px;
+}
+
+.Blog__article-image {
+	margin-bottom: 16px;
+	border-radius: 20px;
+}
+
+.Blog__article-text {
+	@include text2;
+	margin-bottom: 14px;
+}
+
+.Blog__article-icon {
+	margin-right: 9px;
+}
+
+.Blog__article-time {
+	margin-right: 14px;
+	@include text3($c-gray);
+}
+.Blog__article-type {
+	@include text3($c-gray);
+}
+
+.Blog__tutorials {
+	padding-left: 36px;
+}
+
+.Blog__tutorial-heading {
+	margin-bottom: 32px;
+}
+
+.Blog__tutorial-item {
+	@include text3;
+}
+
+.Blog__tutorial-item:not(:last-child) {
+	margin-bottom: 24px;
+	border-bottom: 1px solid $c-grayLines;
+	padding-bottom: 24px;
+}
+
+.Blog__tutorial-text {
+	margin-bottom: 8px;
+	width: 258px;
+}
+
+.Blog__duration {
+	display: flex;
+	align-items: center;
+}
+
+.Blog__play-btn {
+	flex-shrink: 0;
+	margin-right: 8px;
+}
+
+.Blog__duration-text {
+	flex-shrink: 0;
+	@include caption($c-gray);
+}

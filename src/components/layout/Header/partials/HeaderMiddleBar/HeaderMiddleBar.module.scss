@@ -1,0 +1,39 @@
+.HeaderMiddleBar {
+	@include flex-c;
+	row-gap: 10px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 15px 0;
+
+	&__logo {
+		margin-right: 43px;
+		color: #415164;
+	}
+
+	&__search {
+		margin-right: 12px;
+		margin-left: 12px;
+		border: 1px solid $c-grayLines;
+		border-radius: 8px;
+		padding-left: 20px;
+		width: 620px;
+		min-width: 200px;
+		height: 44px;
+
+		&::placeholder {
+			padding: 12px 0px 12px 0px;
+			font-family: $fontFamily;
+		}
+	}
+
+	&__icon-group {
+		display: flex;
+
+		flex-shrink: 0;
+		flex-direction: row;
+		gap: 24px;
+
+		margin-right: 28px;
+		margin-left: auto;
+	}
+}

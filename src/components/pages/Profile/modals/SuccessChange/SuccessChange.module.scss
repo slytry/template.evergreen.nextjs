@@ -1,0 +1,12 @@
+.SuccessChange {
+	&__heading {
+		margin-block-start: rem(24);
+		max-width: 20ch;
+		text-align: center;
+	}
+	&__text {
+		@include text2;
+		margin-block: rem(16) rem(32);
+		text-align: center;
+	}
+}

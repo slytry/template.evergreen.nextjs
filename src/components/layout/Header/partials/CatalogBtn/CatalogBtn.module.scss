@@ -1,0 +1,74 @@
+.CatalogBtn {
+	display: inline-flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 8px;
+	@include caption($c-white, 500);
+	background-color: $c-mainRed;
+	width: 116px;
+	height: 44px;
+
+	@include transition(background-color);
+	&:hover {
+		background-color: $c-hoverRed;
+	}
+	&:active {
+		background-color: $c-activeRed;
+	}
+}
+
+.CatalogBtn__burger {
+	@include flex-c;
+	margin-right: 12px;
+	background: transparent;
+}
+
+.CatalogBtn__line {
+	position: relative;
+	border-radius: 8px;
+	background-color: $c-white;
+	width: 15px;
+	height: 2px;
+
+	@include transition(transform);
+
+	&:before,
+	&:after {
+		position: absolute;
+		left: 0;
+		border-radius: 8px;
+		background-color: $c-white;
+		height: 2px;
+		content: '';
+	}
+
+	&:before {
+		top: -5px;
+		width: 15px;
+	}
+
+	&:after {
+		top: 5px;
+		width: 10px;
+	}
+}
+
+.CatalogBtn.CatalogBtn--open .CatalogBtn__line {
+	background-color: inherit;
+
+	&:before,
+	&:after {
+		top: 0;
+	}
+
+	&:before {
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		transform: rotate(-45deg);
+		width: 15px;
+	}
+}

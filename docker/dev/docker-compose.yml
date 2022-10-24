@@ -1,0 +1,62 @@
+version: '3.5'
+
+# Docker networks settings
+networks:
+    frontend-network:
+        external: true
+        name: '${FRONTEND_NETWORK_NAME}'
+    backend-network:
+        external: true
+        name: '${BACKEND_NETWORK_NAME}'
+
+# Docker shared vulumes for services & Docker Sync
+# volumes:
+#     data-vlm:
+#         external: true
+#         name: vertical-vlm # !RENAME volume name for specific project
+
+# Set general setting for services logging
+x-logging-settings: &logging-settings
+    logging:
+        driver: 'json-file'
+        options:
+            max-file: '2'
+            max-size: '5m'
+
+services:
+    # Nextjs applicaton container
+    &app-service react-nextjs-app: # !RENAME service name for specific project
+        image: node:16-alpine
+        <<: *logging-settings
+        restart: on-failure
+        environment: &app-service-envs
+            CLIENT_API_URL: '${CLIENT_API_URL}'
+            SSR_API_URL: '${SSR_API_URL}'
+            PORT: '${PORT}'
+            HOST_URL: '${HOST_URL}'
+        # for keep alive container
+        command: ['tail', '-f', '/dev/null']
+        working_dir: '/app'
+        volumes:
+            - './../../src:/app'
+        networks:
+            - backend-network
+
+    # NGINX container with proxy
+    react-nextjs-nginx: # !RENAME service name for specific project
+        image: git.chulakov.org:5555/docker/compose/images/nginx:1.22-1.0.0-proxy
+        <<: *logging-settings
+        restart: on-failure
+        depends_on:
+            - *app-service
+        environment:
+            REMOTE_HOST: *app-service
+            REMOTE_PORT: '${PORT}'
+            ROOT_DIR: '/app'
+            VIRTUAL_HOST: '${COMPOSE_PROJECT_NAME}'
+        volumes:
+            - ./etc/nginx/conf.d/default.conf.tpl:/etc/nginx/conf.d/default.conf.tpl
+            - './../../src:/app'
+        networks:
+            - backend-network
+            - frontend-network

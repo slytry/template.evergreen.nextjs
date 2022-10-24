@@ -1,0 +1,14 @@
+.CurrentCategotyItem__heading {
+	@include text3;
+	margin-bottom: 8px;
+	font-weight: 500;
+}
+
+.CurrentCategotyItem__item {
+	@include text3($c-gray);
+	padding: 8px 0;
+
+	&--dark {
+		color: $c-dark;
+	}
+}

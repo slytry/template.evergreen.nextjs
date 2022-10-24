@@ -1,0 +1,172 @@
+.btn {
+	flex-shrink: 0;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+.is-disabled {
+	cursor: not-allowed;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.focus-ring {
+	@include focusRing;
+}
+
+.btn--red {
+	@include text3($c-white);
+	background-color: $c-mainRed;
+	padding: 12px 24px;
+	@include transition(background-color);
+
+	&.is-hovered {
+		background-color: $c-hoverRed;
+	}
+
+	&.is-active {
+		background-color: $c-activeRed;
+	}
+
+	&.is-disabled {
+		background-color: $c-disabled;
+	}
+}
+
+.btn--white {
+	@include headingH3;
+	background-color: $c-white;
+	padding: 12px 24px;
+	@include transition(background-color);
+	@include transition(color);
+
+	&.is-hovered {
+		color: $c-hoverRed;
+	}
+
+	&.is-active {
+		color: $c-activeRed;
+	}
+
+	&.is-disabled {
+		background-color: $c-disabled;
+		color: $c-white;
+	}
+}
+
+.btn--gray {
+	@include text3;
+	background-color: $c-grayBtn;
+	padding: 12px 24px;
+	@include transition(color);
+	@include transition(background-color);
+
+	&.is-hovered {
+		background-color: $c-dark;
+		color: $c-white;
+	}
+
+	&.is-active {
+		background-color: $c-dark;
+		color: $c-white;
+	}
+
+	&.is-disabled {
+		background-color: $c-dark;
+		color: $c-white;
+	}
+}
+
+.btn--pink {
+	@include text3($c-mainRed);
+	background-color: $c-pink;
+	padding: 12px 30px;
+	@include transition(color);
+	@include transition(background-color);
+
+	&.is-hovered {
+		color: $c-hoverRed;
+	}
+
+	&.is-active {
+		color: $c-activeRed;
+	}
+
+	&.is-disabled {
+		background-color: $c-grayBtn;
+		color: $c-gray;
+	}
+}
+
+.btn--outline {
+	@include text3($c-mainRed);
+	border: 1px solid $c-mainRed;
+	background-color: $c-white;
+	padding: 12px 0;
+	width: 249px;
+	@include transition(color);
+	@include transition(background-color);
+
+	&.is-hovered {
+		border-color: $c-hoverRed;
+		color: $c-hoverRed;
+	}
+
+	&.is-active {
+		border-color: $c-activeRed;
+		color: $c-activeRed;
+	}
+
+	&.is-disabled {
+		border-color: $c-gray;
+		color: $c-gray;
+	}
+}
+
+.btn--blue {
+	@include text3;
+	background: transparent;
+	padding: 0;
+	color: $c-mainBlue;
+	@include transition(color);
+
+	&.is-hovered {
+		color: $c-hoverBlue;
+	}
+
+	&.is-active {
+		color: $c-activeBlue;
+	}
+
+	&.is-disabled {
+		color: $c-gray;
+	}
+}
+
+.btn--chevron {
+	@include flex-c;
+	@include text3;
+	gap: 6px;
+	background: transparent;
+	padding: 0;
+	color: $c-mainBlue;
+	@include transition(color);
+
+	&.is-hovered {
+		color: $c-hoverBlue;
+	}
+
+	&.is-active {
+		color: $c-activeBlue;
+	}
+
+	&.is-disabled {
+		color: $c-gray;
+	}
+}
+
+.btn__arrow {
+	transform: rotate(180deg);
+}

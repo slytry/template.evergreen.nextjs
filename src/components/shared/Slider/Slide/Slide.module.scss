@@ -1,0 +1,45 @@
+.Slide {
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&--light {
+		color: $c-white;
+	}
+
+	&--dark {
+		color: $c-dark;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		margin: 40px 0 0 40px;
+	}
+
+	&__secondary-button {
+		margin-bottom: 20px;
+		border: 1px solid rgba(12, 31, 52, 0.1);
+		border-radius: 8px;
+		background: transparent;
+		padding: 4px 10px;
+		max-width: 120px;
+		@include smallText;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 28px;
+	}
+
+	&__subtitle {
+		margin-bottom: 52px;
+		font-size: 18px;
+	}
+
+	&__main-button {
+		align-self: flex-start;
+		@include text3;
+		font-weight: 500;
+	}
+}
