@@ -2,8 +2,8 @@ import { rest } from 'msw';
 
 import { commonUrls } from 'lib/constants/urls';
 import { withBase } from 'lib/constants/urls/withBase.utils';
-import { TodoDataRu } from 'lib/models/pages/Home/Todo.data.ru';
 import { TodoDataEn, TTodoData } from 'lib/models/pages/Home/Todo.data.en';
+import { TodoDataRu } from 'lib/models/pages/Home/Todo.data.ru';
 
 const URL = withBase(commonUrls) as typeof commonUrls;
 

@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 
 import { queryKeys } from 'lib/constants/queryKyes';
 import { commonUrls } from 'lib/constants/urls';
+import { TTodoData } from 'lib/models/pages/Home/Todo.data.en';
 
 import { http } from './http';
-import { TTodoData } from 'lib/models/pages/Home/Todo.data.en';
 
 export const getTodos = async (locale = 'ru') =>
 	await http.get<TTodoData>(commonUrls.TODO, {

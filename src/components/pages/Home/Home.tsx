@@ -1,6 +1,8 @@
-import { useTodosQuery } from 'lib/services/common.service';
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
+
+import { useTodosQuery } from 'lib/services/common.service';
+// "prepare": "husky install"
 
 const HomePage = () => {
 	const { data } = useTodosQuery();
