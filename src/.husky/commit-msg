@@ -2,4 +2,4 @@
 
 . "$(dirname "$0")/_/husky.sh"
 
-commitlint -e $GIT_PARAMS
+pnpm exec commitlint -e $GIT_PARAMS
