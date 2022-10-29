@@ -1,10 +1,11 @@
 # Next.js 13 boilerplate
-https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
+
 ## TODO
 
 1. Storybook - подключение + eslint
 2. Jest - подключение + eslint
 3. Библиотека компонентов (react-aria)
+4. Не удалось подключить типизацию локалей. Не видит react-i18next
 
 ## Как приступить к работе
 
@@ -68,8 +69,4 @@ React Query — одна из лучших библиотек для управ�
 
 Интернационализация реализуется втроенный в nextjs [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing#limits-for-the-i18n-config) функционалом и библиотекой [next-i18next](https://github.com/i18next/next-i18next).
 
-
 ### Mocks (MSW)
-
-## Это бибилиотеки могут быть полезны
-

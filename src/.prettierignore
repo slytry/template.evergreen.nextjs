@@ -6,7 +6,5 @@ storybook-static
 public
 
 # files
-**/*.test.js
-/**/*.d.ts
 *.svg
 package-lock.json

@@ -1,32 +1,44 @@
-/* eslint-disable consistent-return */
 import { useEffect, useState } from 'react';
-import { useIsSSR } from 'react-aria';
 
-export function useMediaQuery(query: string) {
-	const supportsMatchMedia =
-		typeof window !== 'undefined' && typeof window.matchMedia === 'function';
-	const [matches, setMatches] = useState(() =>
-		supportsMatchMedia ? window.matchMedia(query).matches : false
-	);
+function useMediaQuery(query: string): boolean {
+	const getMatches = (query: string): boolean => {
+		// Prevents SSR issues
+		if (typeof window !== 'undefined') {
+			return window.matchMedia(query).matches;
+		}
+		return false;
+	};
+
+	const [matches, setMatches] = useState<boolean>(getMatches(query));
+
+	function handleChange() {
+		setMatches(getMatches(query));
+	}
 
 	useEffect(() => {
-		if (!supportsMatchMedia) {
-			return;
+		const matchMedia = window.matchMedia(query);
+
+		// Triggered at the first client-side load and if query changes
+		handleChange();
+
+		// Listen matchMedia
+		if (matchMedia.addListener) {
+			matchMedia.addListener(handleChange);
+		} else {
+			matchMedia.addEventListener('change', handleChange);
 		}
 
-		const mq = window.matchMedia(query);
-		const onChange = (evt) => {
-			setMatches(evt.matches);
-		};
-
-		mq.addListener(onChange);
 		return () => {
-			mq.removeListener(onChange);
+			if (matchMedia.removeListener) {
+				matchMedia.removeListener(handleChange);
+			} else {
+				matchMedia.removeEventListener('change', handleChange);
+			}
 		};
-	}, [supportsMatchMedia, query]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [query]);
 
-	// If in SSR, the media query should never match. Once the page hydrates,
-	// this will update and the real value will be returned.
-	const isSSR = useIsSSR();
-	return isSSR ? false : matches;
+	return matches;
 }
+
+export default useMediaQuery;

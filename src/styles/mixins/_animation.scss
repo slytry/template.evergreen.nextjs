@@ -6,7 +6,11 @@
 @mixin transition($transitions...) {
 	$unfoldedTransitions: ();
 	@each $transition in $transitions {
-		$unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
+		$unfoldedTransitions: append(
+			$unfoldedTransitions,
+			unfoldTransition($transition),
+			comma
+		);
 	}
 
 	-webkit-transition: $unfoldedTransitions;
@@ -56,6 +60,5 @@
 	opacity: 1;
 
 	transition-delay: 0ms;
-
 	pointer-events: auto;
 }

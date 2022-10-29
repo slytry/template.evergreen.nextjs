@@ -6,16 +6,16 @@ interface ViewportSize {
 	height: number;
 }
 
-let visualViewport = typeof window !== 'undefined' && window.visualViewport;
+const visualViewport = typeof window !== 'undefined' && window.visualViewport;
 
 export function useViewportSize(): ViewportSize {
-	let [size, setSize] = useState(() => getViewportSize());
+	const [size, setSize] = useState(() => getViewportSize());
 
 	useEffect(() => {
 		// Use visualViewport api to track available height even on iOS virtual keyboard opening
-		let onResize = () => {
+		const onResize = () => {
 			setSize((size) => {
-				let newSize = getViewportSize();
+				const newSize = getViewportSize();
 				if (newSize.width === size.width && newSize.height === size.height) {
 					return size;
 				}

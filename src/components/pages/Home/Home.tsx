@@ -1,31 +1,23 @@
+import { useTodosQuery } from 'lib/services/common.service';
+import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
-import { ReactElement } from 'react';
 
-import { AdvantagesList } from './partials/AdvantageList';
-import { Blog } from './partials/Blog';
-import { EventsSection } from './partials/EventsSection';
-import { NewProducts } from './partials/NewProducts';
-import { PopularBrands } from './partials/PopularBrands';
-import { PopularCategories } from './partials/PopularCategories';
-import { TopSales } from './partials/TopSales';
-import { TopSliders } from './partials/TopSliders';
-
-const HomePage = ({ locale }): ReactElement => (
-	<main>
-		<Head>
-			<title>Vertical - Home</title>
-			<meta name="description" content="Home" />
-		</Head>
-		<p>{locale}</p>
-		<TopSliders />
-		<AdvantagesList />
-		<TopSales />
-		<NewProducts />
-		<PopularCategories />
-		<PopularBrands />
-		<Blog />
-		<EventsSection />
-	</main>
-);
+const HomePage = () => {
+	const { data } = useTodosQuery();
+	const { t } = useTranslation(['custom']);
+	return (
+		<main>
+			<Head>
+				<title>{t('title')}</title>
+				<meta name="description" content="Home page" />
+			</Head>
+			<ul>
+				{data.todos.map((el) => {
+					<li key={el.title}>{el.title}</li>;
+				})}
+			</ul>
+		</main>
+	);
+};
 
 export { HomePage };

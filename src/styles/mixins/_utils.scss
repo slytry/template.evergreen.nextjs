@@ -34,12 +34,6 @@
 	}
 }
 
-@mixin flex-c {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 @mixin centering {
 	display: grid;
 	place-content: center;
@@ -48,22 +42,4 @@
 @mixin focusRing {
 	outline: $c-grayLines auto 2px;
 	outline-offset: 2px;
-}
-
-@mixin scrollbar {
-	// Standard version (Firefox only for now)
-	scrollbar-color: $c-dark transparent;
-	// For Chrome & Safari
-	&::-webkit-scrollbar {
-		width: 3px;
-		height: 110px;
-	}
-	&::-webkit-scrollbar-thumb {
-		border-radius: 99px;
-		background: $c-dark;
-		padding: 0px 4px;
-	}
-	&::-webkit-scrollbar-track {
-		background: transparent;
-	}
 }

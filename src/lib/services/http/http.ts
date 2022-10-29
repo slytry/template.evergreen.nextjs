@@ -1,43 +1,18 @@
-/* eslint-disable default-case */
 import axios, {
 	AxiosInstance,
 	AxiosRequestConfig,
 	AxiosResponse,
 	AxiosError,
 } from 'axios';
-import { getCookie, setCookie } from 'cookies-next';
-import toast from 'react-hot-toast';
 
 import { HttpStatusCodes } from 'lib/constants/HttpStatusCode.ts';
 import { baseURL } from 'lib/constants/urls';
-
-import { refreshAccessToken } from '../user.service';
-
-declare module 'axios' {
-	interface AxiosResponse<T = any> extends Promise<T> {}
-}
-
-const cookieAccesToken = 'accessToken';
 
 const headers: Readonly<Record<string, string | boolean>> = {
 	Accept: 'application/json',
 	'Content-Type': 'application/json; charset=utf-8',
 	'Access-Control-Allow-Credentials': true,
 	'X-Requested-With': 'XMLHttpRequest',
-};
-
-const injectToken = (config: AxiosRequestConfig): AxiosRequestConfig => {
-	try {
-		const token = getCookie(cookieAccesToken);
-
-		if (token != null) {
-			config.headers.Authorization = `Bearer ${token}`;
-		}
-
-		return config;
-	} catch (error) {
-		throw new Error(error);
-	}
 };
 
 class Http {
@@ -54,8 +29,6 @@ class Http {
 			withCredentials: true,
 		});
 
-		http.interceptors.request.use(injectToken, (error) => Promise.reject(error));
-
 		http.interceptors.response.use(
 			({ data }: AxiosResponse) => data,
 			(error) => this.handleError(error)
@@ -65,18 +38,20 @@ class Http {
 		return http;
 	}
 
-	request<T = any, R = AxiosResponse<T>>(config: AxiosRequestConfig): Promise<R> {
+	request<T = unknown, R = AxiosResponse<T>>(
+		config: AxiosRequestConfig
+	): Promise<R> {
 		return this.http.request(config);
 	}
 
-	get<T = any, R = AxiosResponse<T>>(
+	get<T = unknown, R = AxiosResponse<T>>(
 		url: string,
 		config?: AxiosRequestConfig
 	): Promise<R> {
 		return this.http.get<T, R>(url, config);
 	}
 
-	post<T = any, R = AxiosResponse<T>>(
+	post<T = unknown, R = AxiosResponse<T>>(
 		url: string,
 		data?: T,
 		config?: AxiosRequestConfig
@@ -84,7 +59,7 @@ class Http {
 		return this.http.post<T, R>(url, data, config);
 	}
 
-	put<T = any, R = AxiosResponse<T>>(
+	put<T = unknown, R = AxiosResponse<T>>(
 		url: string,
 		data?: T,
 		config?: AxiosRequestConfig
@@ -92,7 +67,7 @@ class Http {
 		return this.http.put<T, R>(url, data, config);
 	}
 
-	delete<T = any, R = AxiosResponse<T>>(
+	delete<T = unknown, R = AxiosResponse<T>>(
 		url: string,
 		config?: AxiosRequestConfig
 	): Promise<R> {
@@ -108,21 +83,9 @@ class Http {
 					break;
 				}
 				case HttpStatusCodes.FORBIDDEN: {
-					toast.error('FORBIDDEN');
-
 					break;
 				}
 				case HttpStatusCodes.UNAUTHORIZED: {
-					const config = error?.config as AxiosRequestConfig & {
-						_retry: boolean;
-					};
-					if (!config._retry) {
-						config._retry = true;
-						const { access_token } = await refreshAccessToken();
-						setCookie(cookieAccesToken, access_token);
-						config.headers.Authorization = `Bearer ${access_token}`;
-						return this.http(config);
-					}
 					break;
 				}
 				case HttpStatusCodes.TOO_MANY_REQUESTS: {

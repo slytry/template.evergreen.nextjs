@@ -1,7 +1,5 @@
 @use './common';
 
-html,
 body {
 	font-family: $fontFamily;
-	@extend %scrollbar;
 }

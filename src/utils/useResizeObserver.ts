@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 import { RefObject, useEffect } from 'react';
 
 function hasResizeObserver() {
@@ -10,11 +9,13 @@ type useResizeObserverOptionsType<T> = {
 	onResize: () => void;
 };
 
-export function useResizeObserver<T extends Element>(options: useResizeObserverOptionsType<T>) {
+export function useResizeObserver<T extends Element>(
+	options: useResizeObserverOptionsType<T>
+) {
 	const { ref, onResize } = options;
 
 	useEffect(() => {
-		let element = ref?.current;
+		const element = ref?.current;
 		if (!element) {
 			return;
 		}
