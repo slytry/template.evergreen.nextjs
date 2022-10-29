@@ -12,7 +12,8 @@
 		"eslint": "eslint . --ext .tsx,.ts --fix",
 		"lint": "next lint",
 		"log": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
-		"preinstall": "npx only-allow pnpm"
+		"preinstall": "npx only-allow pnpm",
+		"prepare": "husky install"
 	},
 	"browserslist": [
 		">1%",
