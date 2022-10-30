@@ -10,7 +10,10 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"editor.formatOnSaveMode": "file",
-	"editor.codeActionsOnSave": ["source.fixAll.eslint"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true,
+		"source.fixAll.eslint": true
+	},
 	"editor.wordSeparators": "`~!@#$%^&*()_-=+[{]}\\|;:'\",.<>/?",
 	"editor.formatOnPaste": false,
 	"editor.formatOnType": false,
@@ -28,7 +31,7 @@
 	"editor.cursorSmoothCaretAnimation": true,
 	"editor.renderWhitespace": "boundary",
 	"editor.wordWrap": "wordWrapColumn",
-	"editor.wordWrapColumn": 110,
+	"editor.wordWrapColumn": 100,
 	"explorer.compactFolders": false,
 	"editor.mouseWheelZoom": true,
 	"editor.unusualLineTerminators": "auto",
@@ -46,6 +49,8 @@
 		"typescript",
 		"typescriptreact"
 	],
+	"css.validate": false,
+	"scss.validate": false,
 	"stylelint.enable": true,
 	"stylelint.validate": ["css", "scss"],
 	"prettier.requireConfig": true,
@@ -112,7 +117,6 @@
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"search.exclude": {
-		"**/.DS_Store": true,
 		"**/._.DS_Store": true,
 		"**/node_modules": false,
 		"**/.next": true,
@@ -147,7 +151,6 @@
 		"**/bower_components": true,
 		"**/.idea": true,
 		"**/tmp": true,
-		"**/.git": true,
 		"**/.svn": true,
 		"**/.hg": true,
 		"**/CVS": true,

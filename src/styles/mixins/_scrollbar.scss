@@ -1,19 +1,23 @@
 @use 'vars/colors' as *;
 
 %scrollbar {
-	$inner-size: 2px;
-	$border-width: 7px;
+	$innerSize: 2px;
+	$borderWidth: 7px;
+
 	&::-webkit-scrollbar {
 		width: $inner-size + $border-width * 2;
 	}
+
 	&::-webkit-scrollbar-thumb {
-		position: relative;
-		border: $border-width solid $c-white;
-		border-top: none;
-		border-bottom: none;
+		background-color: #000;
+
+		border: $border-width solid $white;
+		border-bottom: 0;
 		border-radius: 8px;
-		background-color: black;
+		border-top: 0;
+		position: relative;
 	}
+
 	&::-webkit-scrollbar-track {
 		background: transparent;
 	}

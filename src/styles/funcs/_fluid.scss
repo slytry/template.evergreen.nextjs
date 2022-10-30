@@ -16,7 +16,13 @@
 /*
 Функция принимает минимальное и максимальное значение в пикселях. И предельные ширины экрана, между которыми размер будет линейно изменяться в замивисости от ширины. При выходу за эти границы применяться заданные значения
 */
-@function fluid($minSize, $maxSize, $units: 'vw', $minWidth: 375, $maxWidth: 1440) {
+@function fluid(
+	$minSize,
+	$maxSize,
+	$units: 'vw',
+	$minWidth: 375,
+	$maxWidth: 1440
+) {
 	// convert to rem
 	$minSize: math.div($minSize, 16);
 	$maxSize: math.div($maxSize, 16);

@@ -1,16 +1,16 @@
-@mixin respond-above($breakpoint) {
+@mixin respondAbove($breakpoint) {
 	@media only screen and (min-width: $breakpoint) {
 		@content;
 	}
 }
 
-@mixin respond-below($breakpoint) {
+@mixin respondBelow($breakpoint) {
 	@media only screen and (max-width: $breakpoint) {
 		@content;
 	}
 }
 
-@mixin respond-between($lower, $upper) {
+@mixin respondBetween($lower, $upper) {
 	@media (min-width: $lower) and (max-width: $upper) {
 		@content;
 	}

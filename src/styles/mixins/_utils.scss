@@ -1,32 +1,32 @@
 @use 'vars' as *;
 
-@mixin v-hidden {
-	clip: rect(0 0 0 0);
-	position: absolute;
-	clip-path: inset(50%);
-	margin: 0 -1px -1px 0;
+@mixin vHidden {
 	border: 0;
-	width: 1px;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
 	height: 1px;
+	margin: 0 -1px -1px 0;
 	overflow: hidden;
+	position: absolute;
 	white-space: nowrap;
+	width: 1px;
 }
 
 @mixin container {
 	margin-inline: auto;
-	padding-inline: $space-80;
 	max-width: $xl;
 	overflow-x: hidden;
+	padding-inline: $space-80;
 }
 
-@mixin text-shorten($numLines: 1) {
+@mixin textShorten($numLines: 1) {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 
 	@supports (-webkit-line-clamp: $numLines) {
 		-webkit-box-orient: vertical;
-		display: -webkit-box;
+		display: box;
 		-webkit-line-clamp: $numLines;
 		overflow: hidden;
 		text-overflow: ellipsis;

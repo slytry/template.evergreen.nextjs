@@ -1,11 +1,4 @@
 @use 'colors' as *;
 
-$dialog-max-width: 90vw;
-$dialog-max-height: 90%;
-
-$dialog-border-radius: 20px;
-$dialog-width-small: 432px;
-$dialog-padding-x: 28px;
-$dialog-padding-y: 40px;
-$dialog-padding-y-small: 24px;
-$dialog-bg-color: $c-white;
+$dialogMaxWidth: 90vw;
+$dialogMaxHeight: 90%;

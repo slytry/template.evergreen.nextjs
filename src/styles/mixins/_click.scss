@@ -2,13 +2,13 @@
 	position: relative;
 
 	&::before {
-		position: absolute;
-		top: ($sizeZone * -1);
-		right: ($sizeZone * -1);
 		bottom: ($sizeZone * -1);
-		left: ($sizeZone * -1);
-		cursor: pointer;
 
 		content: '';
+		cursor: pointer;
+		left: ($sizeZone * -1);
+		position: absolute;
+		right: ($sizeZone * -1);
+		top: ($sizeZone * -1);
 	}
 }

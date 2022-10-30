@@ -9,7 +9,7 @@
 		"build": "next build",
 		"start": "next start",
 		"prettier": "prettier --write .",
-		"eslint": "eslint . --ext .tsx,.ts --fix",
+		"stylelint": "stylelint \"**/*.scss\" --fix",
 		"lint": "next lint",
 		"log": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
 		"preinstall": "npx only-allow pnpm",

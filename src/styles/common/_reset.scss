@@ -23,9 +23,9 @@ dd {
 /* Remove list styles on ul, ol */
 ul,
 ol {
+	list-style: none;
 	margin: 0;
 	padding: 0;
-	list-style: none;
 }
 
 /* Set core root defaults */
@@ -35,10 +35,10 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 	min-height: 100vh;
 	overflow-x: hidden;
-	line-height: 1.5;
+	text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */
@@ -60,6 +60,7 @@ textarea,
 select {
 	font: inherit;
 }
+
 button {
 	padding: 0;
 }
@@ -75,8 +76,8 @@ button {
 	*::after {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
 	}
 }
 

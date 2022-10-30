@@ -2,20 +2,20 @@
 
 @function rem($size) {
 	$remValue: math.div($size, 16);
-	$roundedValue: decimal-round($remValue, 3) * 1rem;
+	$roundedValue: decimalRound($remValue, 3) * 1rem;
 
 	@return $roundedValue;
 }
 
 @function relative($size, $width: 1440) {
 	$relativeValue: math.div($size, $width);
-	$roundedValue: decimal-round($relativeValue * 100, 3);
+	$roundedValue: decimalRound($relativeValue * 100, 3);
 
 	@return $roundedValue;
 }
 
-@function decimal-round($number, $digits: 0, $mode: round) {
-	$n: 1;
+@function decimalRound($number, $digits: 0, $mode: round) {
+	$nn: 1;
 
 	// $number must be a number
 	@if type-of($number) !=number {
@@ -34,16 +34,16 @@
 
 	@if $digits >0 {
 		@for $i from 1 through $digits {
-			$n: $n * 10;
+			$nn: $nn * 10;
 		}
 	}
 
 	@if $mode ==round {
-		@return math.div(math.round($number * $n), $n);
+		@return math.div(math.round($number * $nn), $nn);
 	} @else if $mode ==ceil {
-		@return math.div(math.ceil($number * $n), $n);
+		@return math.div(math.ceil($number * $nn), $nn);
 	} @else if $mode ==floor {
-		@return math.div(math.floor($number * $n), $n);
+		@return math.div(math.floor($number * $nn), $nn);
 	} @else {
 		@warn '#{ $mode } is undefined keyword.';
 		@return $number;
