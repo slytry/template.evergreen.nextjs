@@ -3,4 +3,4 @@
 . "$(dirname "$0")/_/husky.sh"
 
 echo 'fsdfsdf'
-pnpm exec commitlint -e $GIT_PARAMS
+cd src && pnpm exec commitlint -e $GIT_PARAMS
