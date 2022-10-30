@@ -2,5 +2,17 @@
 	"tabWidth": 2,
 	"useTabs": true,
 	"singleQuote": true,
-	"printWidth": 80
+	"printWidth": 80,
+	"overrides": [
+		{
+			"files": ["*.yaml", "*.yml"],
+			"options": {
+				"singleQuote": false
+			}
+		},
+		{
+			"files": ".prettierrc",
+			"options": { "parser": "json" }
+		}
+	]
 }

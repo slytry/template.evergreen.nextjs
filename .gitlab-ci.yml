@@ -11,9 +11,9 @@ stages:
   - scan-vuln
 
 .Deploy_template: &deploy
-    tags: [docker-asg]
-    image: alpine:latest
-    before_script:
+  tags: [docker-asg]
+  image: alpine:latest
+  before_script:
     # Подготовка SSH-ключей для доступа к серверу из раннера
     - apk add --no-cache openssh
     - eval $(ssh-agent -s)
@@ -25,7 +25,7 @@ stages:
     - ssh-keyscan $DESTINATION_IP >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
     - chmod 400 ~/.ssh/id_rsa
-    script:
+  script:
     - echo "${PRJENV}" | tr -d '\r' > ./.env
     - scp -i ~/.ssh/id_rsa ./.env $SSH_USER@$DESTINATION_IP:$DEPLOY_DIR/docker/$CI_ENVIRONMENT_NAME/ && rm -f ./.env
     - ssh -i ~/.ssh/id_rsa $SSH_USER@$DESTINATION_IP "cd $DEPLOY_DIR && $DEPLOY_COMMAND"
@@ -74,8 +74,7 @@ Deploy_to_staging:
     - cp -r src/. build/
   script:
     - cd build
-    - npm ci --legacy-peer-deps
-    - npm run telemetry
+    - npm i --legacy-peer-deps
     - npm run build
   artifacts:
     name: $PROJECT-$VERSION-SNAPSHOT-$CI_PIPELINE_ID
@@ -258,7 +257,7 @@ Scan_vulneables_test_prepare:
 Scan_vulneables_test:
   stage: scan-vuln
   tags: [docker-asg]
-  image: 
+  image:
     name: aquasec/trivy
     entrypoint: [""]
   script:
@@ -268,19 +267,17 @@ Scan_vulneables_test:
   environment:
     name: test
 
-
 #=====================================|
 #         Проверка уязвимостей        |
 #=====================================|
 .Scan_image_template: &scan-image
   tags: [docker-asg]
-  image: 
+  image:
     name: aquasec/trivy
     entrypoint: [""]
   script:
     - trivy image $NEXT_IMAGE
     - trivy image $NGINX_IMAGE
-
 
 Scan_test_images:
   stage: scan-vuln
