@@ -1,0 +1,128 @@
+{
+	//===========================================
+	//============= Helpers =====================
+	//===========================================
+	"renderArrowFunction": {
+		"prefix": "ren",
+		"body": [
+			"{",
+			"${1:first}",
+			"return (",
+			"${2:prev}",
+			")",
+			"}"
+		],
+		"description": "Creates return part of arrow function",
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+	"exportInterface": {
+		"prefix": "ei",
+		"body": [
+			"export interface I${1:App} {${2:Second}}"
+		],
+		"description": "Creates return part of arrow function",
+		"scope": "typescript,typescriptreact"
+	},
+	"reExport": {
+		"prefix": "rexp",
+		"body": [
+			"export * from '.$1'"
+		],
+		"description": "Re export entities",
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+	"consoleGroup": {
+		"prefix": "logG",
+		"body": [
+			"console.group(['VARS']);",
+			"console.log($1);",
+			"console.groupEnd();"
+		],
+		"description": "Re export entities",
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+	//===========================================
+	//============= Components ==================
+	//===========================================
+	"custoRreactArrowFunctionExportComponent": {
+		"prefix": "craf",
+		"body": [
+			"import cn from 'classnames/bind';",
+			"",
+			"import styles from './${TM_FILENAME_BASE}.module.scss';",
+			"",
+			"const cx = cn.bind(styles);",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {",
+			"className?: string;",
+			"}",
+			"",
+			"export const ${TM_FILENAME_BASE} = ({ className }: ${TM_FILENAME_BASE}Props) => {",
+			"  return (",
+			"    <div className={cx('${TM_FILENAME_BASE}', className)}>$1</div>",
+			"  )",
+			"}"
+		],
+		"description": "Creates a React TypeScript Arrow Function Component with ES7 module system",
+		"scope": "typescript,typescriptreact"
+	},
+	//===========================================
+	//============= Scss ========================
+	//===========================================
+	"respond-above": {
+		"prefix": "ra",
+		"body": [
+			"@include respond-above($1) {",
+			"$2",
+			"}"
+		],
+		"description": "Log output to console",
+		"scope": "scss,sass"
+	},
+	//===========================================
+	//============= classnames ==================
+	//===========================================
+	"addStylesWithClassnames": {
+		"prefix": "cnstyle",
+		"description": "Creates a import styles and Classnames lib",
+		"body": [
+			"import cn from 'classnames/bind';",
+			"",
+			"import styles from './${TM_FILENAME_BASE}.module.scss';",
+			"",
+			"const cx = cn.bind(styles);",
+			""
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+	"addReactClassWithClassnames": {
+		"prefix": "cx",
+		"description": "Creates classname react attribute",
+		"body": [
+			"className={cx('${TM_FILENAME_BASE}$1')}"
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+	//===========================================
+	//============= clsx ========================
+	//===========================================
+	"addStylesWithClsx": {
+		"prefix": "cls",
+		"description": "Creates a import styles and Classnames lib",
+		"body": [
+			"import { clsx } from 'clsx';",
+			"",
+			"import s from './${TM_FILENAME_BASE}.module.scss';",
+			"",
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+	"addClsx": {
+		"prefix": "sx",
+		"description": "Creates clsx react attribute",
+		"body": [
+			"className={clsx('1')}"
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+}

@@ -40,8 +40,6 @@
 	//===========================================
 	//============= Linters =====================
 	//===========================================
-	"prettier.configPath": "./src/.prettierrc",
-	"eslint.workingDirectories": ["./src"],
 	"eslint.alwaysShowStatus": true,
 	"eslint.validate": [
 		"javascript",
@@ -52,7 +50,10 @@
 	"css.validate": false,
 	"scss.validate": false,
 	"stylelint.enable": true,
-	"stylelint.validate": ["css", "scss"],
+	"stylelint.validate": [
+		"css",
+		"scss"
+	],
 	"prettier.requireConfig": true,
 	"cSpell.language": "en,ru",
 	"cSpell.words": [
@@ -95,10 +96,14 @@
 	"explorer.confirmDragAndDrop": false,
 	"explorer.openEditors.visible": 0,
 	//===========================================
+	//============ Terminal =====================
+	//===========================================
+	// Ensure enough terminal history is preserved when running tests.
+	"terminal.integrated.scrollback": 10000,
+	//===========================================
 	//============= Other =======================
 	//===========================================
 	"git.enableSmartCommit": true,
-	"workbench.settings.useSplitJSON": true,
 	"git.confirmSync": false,
 	"git.autofetch": true,
 	"npm.packageManager": "pnpm",
@@ -118,7 +123,11 @@
 	"files.trimTrailingWhitespace": true,
 	"search.exclude": {
 		"**/._.DS_Store": true,
-		"**/node_modules": false,
+		"**/package-lock.json": true,
+		"**/node_modules": true,
+		"**/.gitlab-ci.yml": true,
+		"**/docker": true,
+		"**/.storybook": true,
 		"**/.next": true,
 		"**/*.log": true,
 		"**/*.log*": true,
@@ -142,11 +151,12 @@
 		"screenshots": true,
 		"yarn-error.log": true,
 		"**/pnpm-lock.yaml": true,
-		"**/.yarn": true
+		"**/.yarn": true,
+		"**/.tsconfig.json": true
 	},
 	"files.exclude": {
 		"**/.cache": true,
-		"**/.editorconfig": true,
+		"**/.editorconfig": false,
 		"**/.eslintcache": true,
 		"**/bower_components": true,
 		"**/.idea": true,
@@ -156,7 +166,7 @@
 		"**/CVS": true,
 		"**/.DS_Store": true,
 		"**/._.DS_Store": true,
-		"**/node_modules": false,
+		"**/node_modules": true,
 		"**/.next": true,
 		"**/.git": true
 	},
@@ -169,5 +179,41 @@
 		"**/bower_components/**": true,
 		"**/dist/**": true,
 		"**/yarn.lock": true
-	}
+	},
+	//===========================================
+	//============= Extensions ==================
+	//===========================================
+	"reactSnippets.settings.typescriptPropsStatePrefix": "interface",
+	"reactSnippets.settings.importReactOnTop": false,
+	"reactSnippets.settings.typescript": true,
+	"[scss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	// Configure todo-tree to exclude node_modules, dist, and compiled.
+	"todo-tree.filtering.excludeGlobs": [
+		"**/node_modules",
+		"**/dist",
+		"**/compiled"
+	],
+	// Match TODO-APP in addition to other TODOs.
+	"todo-tree.general.tags": [
+		"BUG",
+		"HACK",
+		"FIXME",
+		"TODO",
+		"XXX",
+		"[ ]",
+		"[x]",
+		"TODO-APP"
+	],
+	"jest.autoRun": "off",
+	//===========================================
+	//============= TS ==========================
+	//===========================================
+	"typescript.tsdk": "node_modules\\.pnpm\\typescript@4.9.4\\node_modules\\typescript\\lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.surveys.enabled": false
 }
