@@ -2,6 +2,8 @@
 
 /** @type {import("prettier").Config} */
 module.exports = {
+  semi: true,
+  trailingComma: 'es5',
   "tabWidth": 2,
   "useTabs": true,
   "singleQuote": true,
@@ -11,7 +13,8 @@ module.exports = {
     {
       "files": ["*.yaml", "*.yml"],
       "options": {
-        "singleQuote": false
+        "singleQuote": false,
+        "useTabs": false,
       }
     }
   ]

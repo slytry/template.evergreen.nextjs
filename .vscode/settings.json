@@ -7,16 +7,7 @@
 	//===========================================
 	//============= Editor ======================
 	//===========================================
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"editor.formatOnSaveMode": "file",
-	"editor.codeActionsOnSave": {
-		"source.fixAll.stylelint": true,
-		"source.fixAll.eslint": true
-	},
 	"editor.wordSeparators": "`~!@#$%^&*()_-=+[{]}\\|;:'\",.<>/?",
-	"editor.formatOnPaste": false,
-	"editor.formatOnType": false,
 	"editor.quickSuggestions": {
 		"strings": true
 	},
@@ -38,6 +29,26 @@
 	"editor.glyphMargin": false,
 	"editor.guides.bracketPairs": true,
 	//===========================================
+	//============= Default Linters =============
+	//===========================================
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": false,
+	"editor.formatOnType": false,
+	"editor.formatOnSaveMode": "file",
+	"[javascript, typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true,
+		"source.fixAll.eslint": true
+	},
+	//===========================================
 	//============= Linters =====================
 	//===========================================
 	"eslint.alwaysShowStatus": true,
@@ -50,11 +61,131 @@
 	"css.validate": false,
 	"scss.validate": false,
 	"stylelint.enable": true,
-	"stylelint.validate": [
-		"css",
-		"scss"
-	],
+	"stylelint.validate": ["scss"],
 	"prettier.requireConfig": true,
+	//===========================================
+	//============ Explorer =====================
+	//===========================================
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.openEditors.visible": 0,
+	//===========================================
+	//============ Terminal =====================
+	//===========================================
+	// Ensure enough terminal history is preserved when running tests.
+	"terminal.integrated.scrollback": 10000,
+	//===========================================
+	//============= Other =======================
+	//===========================================
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"git.autofetch": true,
+	"npm.packageManager": "pnpm",
+	"debug.javascript.unmapMissingSources": true,
+	"breadcrumbs.enabled": true,
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	//===========================================
+	//============= TS ==========================
+	//===========================================
+	"typescript.tsdk": "node_modules\\.pnpm\\typescript@4.9.4\\node_modules\\typescript\\lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.surveys.enabled": false,
+	//===========================================
+	//============= Extensions ==================
+	//===========================================
+	"reactSnippets.settings.typescriptPropsStatePrefix": "interface",
+	"reactSnippets.settings.importReactOnTop": false,
+	"reactSnippets.settings.typescript": true,
+	// Configure todo-tree to exclude node_modules, dist, and compiled.
+	"todo-tree.filtering.excludeGlobs": [
+		"**/node_modules",
+		"**/dist",
+		"**/compiled"
+	],
+	// Match TODO-APP in addition to other TODOs.
+	"todo-tree.general.tags": [
+		"BUG",
+		"HACK",
+		"FIXME",
+		"TODO",
+		"XXX",
+		"[ ]",
+		"[x]",
+		"TODO-APP"
+	],
+	"jest.autoRun": "off",
+	//===========================================
+	//============= Files =======================
+	//===========================================
+	"files.autoSave": "onFocusChange",
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"search.exclude": {
+		"**/._.DS_Store": true,
+		"**/package-lock.json": true,
+		"**/node_modules": true,
+		"**/.gitlab-ci.yml": true,
+		"**/docker": true,
+		"**/.storybook": true,
+		"**/.next": true,
+		"**/*.log": true,
+		"**/*.log*": true,
+		"**/bower_components": true,
+		"**/dist": true,
+		"**/elehukouben": true,
+		"**/.git": true,
+		"**/.gitignore": true,
+		"**/.svn": true,
+		"**/.DS_Store": true,
+		"**/.idea": true,
+		"**/.vscode": false,
+		"**/yarn.lock": true,
+		"**/tmp": true,
+		"out": true,
+		"dist": true,
+		"CHANGELOG.md": true,
+		"examples": true,
+		"res": true,
+		"screenshots": true,
+		"yarn-error.log": true,
+		"**/pnpm-lock.yaml": true,
+		"**/.yarn": true,
+		"**/.tsconfig.json": true
+	},
+	"files.exclude": {
+		"**/.cache": true,
+		"**/.editorconfig": false,
+		"**/.eslintcache": true,
+		"**/bower_components": true,
+		"**/.idea": true,
+		"**/tmp": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/._.DS_Store": true,
+		"**/node_modules": false,
+		"**/.next": true,
+		"**/.git": true
+	},
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/.vscode/**": true,
+		"**/node_modules/**": true,
+		"**/tmp/**": true,
+		"**/bower_components/**": true,
+		"**/dist/**": true,
+		"**/yarn.lock": true
+	},
+	//===========================================
+	//============= cSpell ======================
+	//===========================================
 	"cSpell.language": "en,ru",
 	"cSpell.words": [
 		"vben",
@@ -87,133 +218,10 @@
 		"lintstagedrc",
 		"brotli",
 		"tailwindcss",
-		"sider"
-	],
-	//===========================================
-	//============ Explorer =====================
-	//===========================================
-	"explorer.confirmDelete": false,
-	"explorer.confirmDragAndDrop": false,
-	"explorer.openEditors.visible": 0,
-	//===========================================
-	//============ Terminal =====================
-	//===========================================
-	// Ensure enough terminal history is preserved when running tests.
-	"terminal.integrated.scrollback": 10000,
-	//===========================================
-	//============= Other =======================
-	//===========================================
-	"git.enableSmartCommit": true,
-	"git.confirmSync": false,
-	"git.autofetch": true,
-	"npm.packageManager": "pnpm",
-	"debug.javascript.unmapMissingSources": true,
-	"breadcrumbs.enabled": true,
-	"workbench.settings.enableNaturalLanguageSearch": false,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	//===========================================
-	//============= Files =======================
-	//===========================================
-	"files.autoSave": "onFocusChange",
-	"files.eol": "\n",
-	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true,
-	"files.trimTrailingWhitespace": true,
-	"search.exclude": {
-		"**/._.DS_Store": true,
-		"**/package-lock.json": true,
-		"**/node_modules": true,
-		"**/.gitlab-ci.yml": true,
-		"**/docker": true,
-		"**/.storybook": true,
-		"**/.next": true,
-		"**/*.log": true,
-		"**/*.log*": true,
-		"**/bower_components": true,
-		"**/dist": true,
-		"**/elehukouben": true,
-		"**/.git": true,
-		"**/.gitignore": true,
-		"**/.svn": true,
-		"**/.DS_Store": true,
-		"**/.idea": true,
-		"**/.vscode": false,
-		"**/yarn.lock": true,
-		"**/tmp": true,
-		"out": true,
-		"dist": true,
-		"node_modules": true,
-		"CHANGELOG.md": true,
-		"examples": true,
-		"res": true,
-		"screenshots": true,
-		"yarn-error.log": true,
-		"**/pnpm-lock.yaml": true,
-		"**/.yarn": true,
-		"**/.tsconfig.json": true
-	},
-	"files.exclude": {
-		"**/.cache": true,
-		"**/.editorconfig": false,
-		"**/.eslintcache": true,
-		"**/bower_components": true,
-		"**/.idea": true,
-		"**/tmp": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/._.DS_Store": true,
-		"**/node_modules": true,
-		"**/.next": true,
-		"**/.git": true
-	},
-	"files.watcherExclude": {
-		"**/.git/objects/**": true,
-		"**/.git/subtree-cache/**": true,
-		"**/.vscode/**": true,
-		"**/node_modules/**": true,
-		"**/tmp/**": true,
-		"**/bower_components/**": true,
-		"**/dist/**": true,
-		"**/yarn.lock": true
-	},
-	//===========================================
-	//============= Extensions ==================
-	//===========================================
-	"reactSnippets.settings.typescriptPropsStatePrefix": "interface",
-	"reactSnippets.settings.importReactOnTop": false,
-	"reactSnippets.settings.typescript": true,
-	"[scss]": {
-		"editor.defaultFormatter": "stylelint.vscode-stylelint"
-	},
-	"[markdown]": {
-		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-	},
-	// Configure todo-tree to exclude node_modules, dist, and compiled.
-	"todo-tree.filtering.excludeGlobs": [
-		"**/node_modules",
-		"**/dist",
-		"**/compiled"
-	],
-	// Match TODO-APP in addition to other TODOs.
-	"todo-tree.general.tags": [
-		"BUG",
-		"HACK",
-		"FIXME",
-		"TODO",
-		"XXX",
-		"[ ]",
-		"[x]",
-		"TODO-APP"
-	],
-	"jest.autoRun": "off",
-	//===========================================
-	//============= TS ==========================
-	//===========================================
-	"typescript.tsdk": "node_modules\\.pnpm\\typescript@4.9.4\\node_modules\\typescript\\lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"typescript.surveys.enabled": false
+		"sider",
+		"tanstack",
+		"nextjs",
+		"preinstall",
+		"svgr"
+	]
 }
