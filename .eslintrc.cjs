@@ -1,39 +1,28 @@
-// Улучшения XO конфига https://github.com/bizon/eslint-config-xo-bizon/blob/master/index.cjs
-
 module.exports = {
 	root: true,
+	noInlineConfig: true,
 	env: {
 		browser: true,
 		es2021: true,
 	},
-	extends: ['xo', 'next/core-web-vitals', 'prettier'],
-	overrides: [
-		{
-			extends: [
-				'xo', // https://github.com/xojs/eslint-config-xo/blob/main/index.js
-				'xo-typescript', // https://github.com/xojs/eslint-config-xo-typescript/blob/main/index.js
-				'next/core-web-vitals', // https://www.npmjs.com/package/eslint-config-next?activeTab=explore
-				'prettier', // https://github.com/prettier/eslint-config-prettier
-			],
-			files: ['*.ts', '*.tsx'],
-		},
-	],
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 		project: ['./tsconfig.json'],
 	},
-	rules: {
-		// We prefer interfaces
-		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-		// Organize imports
+	extends: ['xo', 'next/core-web-vitals', 'prettier'],
+	overrides: [
+		{
+			extends: ['xo', 'xo-typescript', 'next/core-web-vitals', 'prettier'],
+			files: ['*.ts', '*.tsx'],
+		},
+	],
 
+	rules: {
+		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 		'import/first': 'error',
 		'import/newline-after-import': 'error',
 		'import/no-duplicates': 'error',
-
-		// This sorts named imports
-		// Arbitrary import order rules
 		'import/order': [
 			'error',
 			{
@@ -84,7 +73,6 @@ module.exports = {
 				},
 			},
 		],
-		// This sorts named imports
 		'sort-imports': [
 			'error',
 			{

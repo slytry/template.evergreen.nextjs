@@ -214,6 +214,7 @@
 	//===========================================
 	"cSpell.enabledLanguageIds": ["markdown", "plaintext", "text", "yml"],
 	"cSpell.language": "en,ru",
+	"cSpell.enableFiletypes": ["jsonc"],
 	"cSpell.words": [
 		"vben",
 		"windi",
