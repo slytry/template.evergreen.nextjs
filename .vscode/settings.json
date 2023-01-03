@@ -23,11 +23,11 @@
 	"editor.renderWhitespace": "boundary",
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.wordWrapColumn": 100,
-	"explorer.compactFolders": false,
 	"editor.mouseWheelZoom": true,
 	"editor.unusualLineTerminators": "auto",
 	"editor.glyphMargin": false,
 	"editor.guides.bracketPairs": true,
+	"editor.minimap.enabled": false,
 	//===========================================
 	//============= Default Linters =============
 	//===========================================
@@ -35,15 +35,38 @@
 	"editor.formatOnPaste": false,
 	"editor.formatOnType": false,
 	"editor.formatOnSaveMode": "file",
-	"[javascript, typescript]": {
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[scss]": {
 		"editor.defaultFormatter": "stylelint.vscode-stylelint"
 	},
-	"[markdown]": {
-		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+		"files.trimTrailingWhitespace": false,
+		"editor.renderWhitespace": "all",
+		"editor.acceptSuggestionOnEnter": "off",
+		"editor.parameterHints.enabled": false,
+		"editor.quickSuggestions": {
+			"comments": "off",
+			"strings": "off",
+			"other": "off"
+		},
+		"editor.snippetSuggestions": "none"
+	},
+
 	"editor.codeActionsOnSave": {
 		"source.fixAll.stylelint": true,
 		"source.fixAll.eslint": true
@@ -69,6 +92,7 @@
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
 	"explorer.openEditors.visible": 0,
+	"explorer.compactFolders": false,
 	//===========================================
 	//============ Terminal =====================
 	//===========================================
@@ -87,6 +111,7 @@
 	"diffEditor.ignoreTrimWhitespace": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	//===========================================
 	//============= TS ==========================
 	//===========================================
@@ -117,6 +142,7 @@
 		"TODO-APP"
 	],
 	"jest.autoRun": "off",
+	"svg.preview.mode": "svg",
 	//===========================================
 	//============= Files =======================
 	//===========================================
@@ -186,6 +212,7 @@
 	//===========================================
 	//============= cSpell ======================
 	//===========================================
+	"cSpell.enabledLanguageIds": ["markdown", "plaintext", "text", "yml"],
 	"cSpell.language": "en,ru",
 	"cSpell.words": [
 		"vben",
@@ -222,6 +249,7 @@
 		"tanstack",
 		"nextjs",
 		"preinstall",
+		"trivago",
 		"svgr"
 	]
 }

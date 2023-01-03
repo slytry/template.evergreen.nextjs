@@ -1,22 +1,8 @@
 @use 'sass:math';
 
-@function rem($size) {
-	$remValue: math.div($size, 16);
-	$roundedValue: decimalRound($remValue, 3) * 1rem;
-
-	@return $roundedValue;
-}
-
-@function relative($size, $width: 1440) {
-	$relativeValue: math.div($size, $width);
-	$roundedValue: decimalRound($relativeValue * 100, 3);
-
-	@return $roundedValue;
-}
 
 @function decimalRound($number, $digits: 0, $mode: round) {
 	$nn: 1;
-
 	// $number must be a number
 	@if type-of($number) !=number {
 		@warn '#{ $number } is not a number.';

@@ -1,16 +1,13 @@
-import cn from 'classnames/bind';
-import { ReactElement } from 'react';
+import { type ReactElement } from 'react';
 
-import styles from './AppLayout.module.scss';
+// Import styles from './AppLayout.module.scss';
 
-const cx = cn.bind(styles);
-
-interface AppLayoutProps {
+type AppLayoutProps = {
 	children: ReactElement;
-}
+};
 
 const AppLayout = ({ children }: AppLayoutProps) => (
-	<div className={cx('Layout')}>{children}</div>
+	<div className={'Layout'}>{children}</div>
 );
 
 export { AppLayout };

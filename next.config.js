@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('next').NextConfig} */
 
 const path = require('path');
@@ -7,11 +6,8 @@ const nextConfig = {
 	reactStrictMode: false,
 	swcMinify: true,
 	sassOptions: {
-		includePaths: [path.join(__dirname, 'styles/')],
-		additionalData: `@use "abstract.scss" as *;`,
-	},
-	experimental: {
-		esmExternals: false,
+		includePaths: [path.join(__dirname, 'src/styles/')],
+		additionalData: '@use "abstract.scss" as *;',
 	},
 	webpack(config) {
 		config.module.rules.push({

@@ -1,8 +1,0 @@
-{
-	"title": "Next.js 13",
-	"errors": {
-		"unspecific": "Something went wrong.",
-		"404": "The page was not found.",
-		"anyRequest": "Error in processing request. Error text: {{value}}"
-	}
-}
