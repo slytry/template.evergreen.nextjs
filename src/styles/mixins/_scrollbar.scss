@@ -5,13 +5,13 @@
 	$borderWidth: 7px;
 
 	&::-webkit-scrollbar {
-		width: $inner-size + $border-width * 2;
+		width: $innerSize + $borderWidth * 2;
 	}
 
 	&::-webkit-scrollbar-thumb {
 		background-color: #000;
 
-		border: $border-width solid $white;
+		border: $borderWidth solid $white;
 		border-bottom: 0;
 		border-radius: 8px;
 		border-top: 0;

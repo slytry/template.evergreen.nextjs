@@ -17,10 +17,10 @@
 	// do calculations
 	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
 	$yAxisIntersection: -$minWidth * $slope + $minSize;
-	$preferredValue: '#{decimal-round($yAxisIntersection,3)}rem + #{decimal-round(($slope*100),3) }#{$units}';
+	$preferredValue: '#{decimalRound($yAxisIntersection,3)}rem + #{decimalRound(($slope*100),3) }#{$units}';
 	// output as rem
-	$minSize: decimal-round($minSize, 3) * 1rem;
-	$maxSize: decimal-round($maxSize, 3) * 1rem;
+	$minSize: decimalRound($minSize, 3) * 1rem;
+	$maxSize: decimalRound($maxSize, 3) * 1rem;
 	@return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
 }
 

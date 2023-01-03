@@ -6,7 +6,7 @@ const nextConfig = {
 	reactStrictMode: false,
 	swcMinify: true,
 	sassOptions: {
-		includePaths: [path.join(__dirname, 'src/styles/')],
+		includePaths: [path.join(__dirname, '/src/styles/')],
 		additionalData: '@use "abstract.scss" as *;',
 	},
 	webpack(config) {

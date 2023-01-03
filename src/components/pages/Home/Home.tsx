@@ -7,9 +7,10 @@ const HomePage = () => (
 			<meta name="description" content="Home page" />
 		</Head>
 		<ul>
-			{/* {data.todos.map((el) => {
-				<li key={el.title}>{el.title}</li>;
-			})} */}
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
 		</ul>
 	</main>
 );
