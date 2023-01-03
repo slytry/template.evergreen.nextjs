@@ -12,11 +12,11 @@ function useMediaQuery(query: string): boolean {
 
 	const [matches, setMatches] = useState<boolean>(getMatches(query));
 
-	function handleChange() {
-		setMatches(getMatches(query));
-	}
-
 	useEffect(() => {
+		function handleChange() {
+			setMatches(getMatches(query));
+		}
+
 		const matchMedia = window.matchMedia(query);
 
 		// Triggered at the first client-side load and if query changes

@@ -115,8 +115,8 @@
 	//===========================================
 	//============= TS ==========================
 	//===========================================
-	"typescript.tsdk": "node_modules\\.pnpm\\typescript@4.9.4\\node_modules\\typescript\\lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
+	// "typescript.tsdk": "node_modules\\.pnpm\\typescript@4.9.4\\node_modules\\typescript\\lib",
+	// "typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.surveys.enabled": false,
 	//===========================================
 	//============= Extensions ==================

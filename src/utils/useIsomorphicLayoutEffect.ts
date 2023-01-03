@@ -1,7 +1,10 @@
-/* eslint-disable no-negated-condition */
 import { useEffect, useLayoutEffect } from 'react';
 
-const useIsomorphicLayoutEffect =
-	typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+import useSsr from './useSsr';
+
+const useIsomorphicLayoutEffect = () => {
+	const { isBrowser } = useSsr();
+	return isBrowser ? useLayoutEffect : useEffect;
+};
 
 export default useIsomorphicLayoutEffect;

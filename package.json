@@ -23,10 +23,10 @@
 	},
 	"lint-staged": {
 		"*.scss": "stylelint --fix",
-		"*.{js,json, yml}": "prettier --write",
+		"*.{js,json, yml}": "prettier --list-different --write",
 		"*.ts?(x)": [
 			"eslint",
-			"prettier --parser=typescript --write"
+			"prettier --list-different --parser=typescript --write"
 		]
 	},
 	"browserslist": {
