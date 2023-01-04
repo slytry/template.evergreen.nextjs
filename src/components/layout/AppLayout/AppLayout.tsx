@@ -6,7 +6,7 @@ type AppLayoutProp = {
 	children: ReactNode;
 };
 
-export default function AppLayout({ children }: AppLayoutProp) {
+export function AppLayout({ children }: AppLayoutProp) {
 	return (
 		<div className={s.container}>
 			<header>Header</header>
