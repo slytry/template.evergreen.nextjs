@@ -12,14 +12,14 @@
 		"format": "prettier --write .",
 		"stylelint": "stylelint \"**/*.scss\" --fix",
 		"lint": "next lint",
-		"type-check": "tsc -p tsconfig.json --noEmit --skipLibCheck",
+		"type-check": "tsc --noEmit --skipLibCheck",
 		"preinstall": "node ./scripts/preinstall.js",
 		"postinstall": "simple-git-hooks"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint-staged",
 		"commit-msg": "node scripts/verifyCommit.mjs",
-		"pre-push": "pnpm exec tsc --noEmit --clean"
+		"pre-push": " pnpm type-check"
 	},
 	"lint-staged": {
 		"*.scss": "stylelint --fix",
