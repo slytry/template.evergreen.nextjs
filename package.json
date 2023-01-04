@@ -19,7 +19,7 @@
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint-staged",
 		"commit-msg": "node scripts/verifyCommit.mjs",
-		"pre-push": "pnpm exec tsc --noEmit"
+		"pre-push": "pnpm exec tsc --noEmit --clean"
 	},
 	"lint-staged": {
 		"*.scss": "stylelint --fix",
