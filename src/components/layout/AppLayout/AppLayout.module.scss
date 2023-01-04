@@ -1,43 +1,20 @@
 .container {
-	background: var(--alpha);
-	color: var(--bravo);
+	background: var(--bravo);
+	color: var(--alpha);
 	display: flex;
 	flex-direction: column;
-	font-family: system-ui, sans-serif;
-	line-height: 1.5;
+	font-family: var(--next-font);
+	gap: var(--layout-spacing);
 	min-height: 100vh;
-	padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
+	padding-block: 5vh 1rem;
+	padding-inline: var(--space-80);
 }
 
 .container > * {
-	--layout-spacing: max(8vh, 3rem);
-	--max-width: 100ch;
-	margin-left: auto;
-	margin-right: auto;
-
-	width: min(100%, var(--max-width));
-}
-
-.container > main {
-	margin-top: var(--layout-spacing);
+	margin-inline: auto;
+	width: min(100%, var(--content-width));
 }
 
 .container > footer {
 	margin-top: auto;
-	padding-top: var(--layout-spacing);
-}
-
-.link {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 0.4rem;
-}
-
-:is(.link, .link:hover, .link:focus) img {
-	transition: transform 200ms;
-}
-
-:is(.link:hover, .link:focus) img {
-	transform: scale(1.1);
 }

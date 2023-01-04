@@ -1,12 +1,35 @@
 @use 'sass:list';
 @use 'sass:math';
 @use 'sass:meta';
-@use '../vars/typography' as *;
-@use '../vars/colors' as *;
-@use './media' as *;
+@use './responsive' as *;
 
-$breakpoint: 700px;
+//===========================================
+//============= variables ===================
+//===========================================
 
+$fontSans: 'Inter', sans-serif;
+$fontMono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+	'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+	'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+$fontSystem: system-ui, sans-serif;
+
+$breakpoint: em(700);
+
+$dark: hsl(0, 0%, 0%);
+
+$fs12: rem(12);
+$fs14: rem(14);
+$fs16: rem(16);
+$fs18: rem(18);
+$fs21: rem(21);
+$fs23: rem(23);
+$fs26: rem(26);
+$fs28: rem(28);
+$fs34: rem(34);
+
+//===========================================
+//============= mixins ======================
+//===========================================
 @mixin headingH1($args...) {
 	$color: argsColorHandler($args);
 	$fw: argsFwHandler($args, 500);
@@ -107,6 +130,10 @@ $breakpoint: 700px;
 	font-weight: $fw;
 	line-height: 1.35;
 }
+
+//===========================================
+//============= help func ===================
+//===========================================
 
 @function argsColorHandler($args) {
 	$color: $c-dark;

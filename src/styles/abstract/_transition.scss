@@ -1,14 +1,14 @@
-@use 'vars/animation' as *;
-
 // Usage:   @include transition(width, height 0.3s ease-in-out);
 // Output:  -webkit-transition(width 0.2s, height 0.3s ease-in-out);
 //          transition(width 0.2s, height 0.3s ease-in-out);
 @mixin transition($transitions...) {
 	$unfoldedTransitions: ();
 	@each $transition in $transitions {
-		$unfoldedTransitions: append($unfoldedTransitions,
-		unfoldTransition($transition),
-		comma);
+		$unfoldedTransitions: append(
+			$unfoldedTransitions,
+			unfoldTransition($transition),
+			comma
+		);
 	}
 
 	transition: $unfoldedTransitions;

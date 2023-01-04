@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 
 import { AppLayout } from '@/components/layout/AppLayout';
 
-import '@/styles/document.scss';
+import '@/styles/main.scss';
 
 const App = ({ Component, pageProps }: AppProps) => (
 	<AppLayout>

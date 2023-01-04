@@ -5,13 +5,13 @@ import {
 	useState,
 } from 'react';
 
-type UseBooleanOutput = {
+interface UseBooleanOutput {
 	value: boolean;
 	setValue: Dispatch<SetStateAction<boolean>>;
 	setTrue: () => void;
 	setFalse: () => void;
 	toggle: () => void;
-};
+}
 
 function useBoolean(defaultValue?: boolean): UseBooleanOutput {
 	const [value, setValue] = useState(Boolean(defaultValue));

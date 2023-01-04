@@ -7,7 +7,7 @@ const nextConfig = {
 	swcMinify: true,
 	sassOptions: {
 		includePaths: [path.join(__dirname, '/src/styles/')],
-		additionalData: '@use "abstract.scss" as *;',
+		additionalData: '@use "abstract" as *;',
 	},
 	webpack(config) {
 		config.module.rules.push({
