@@ -1,9 +1,0 @@
-@use 'sass:math';
-@use '../funcs' as *;
-
-$radius8: rem(8);
-
-$space80: fluid(15, 80);
-
-$vSpace24: fluid(16, 24, 'vh');
-$vSpace28: fluid(18, 28, 'vh');

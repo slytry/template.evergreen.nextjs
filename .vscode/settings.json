@@ -35,17 +35,33 @@
 	"editor.formatOnPaste": false,
 	"editor.formatOnType": false,
 	"editor.formatOnSaveMode": "file",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true,
+		"source.fixAll.eslint": true
+	},
 	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		}
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		}
 	},
 	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		}
 	},
 	"[scss]": {
-		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": true
+		}
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -66,11 +82,6 @@
 		},
 		"editor.snippetSuggestions": "none"
 	},
-
-	"editor.codeActionsOnSave": {
-		"source.fixAll.stylelint": true,
-		"source.fixAll.eslint": true
-	},
 	//===========================================
 	//============= Linters =====================
 	//===========================================
@@ -84,7 +95,8 @@
 	"css.validate": false,
 	"scss.validate": false,
 	"stylelint.enable": true,
-	"stylelint.validate": ["scss"],
+	"stylelint.validate": ["css", "scss"],
+	"stylelint.packageManager": "pnpm",
 	"prettier.requireConfig": true,
 	//===========================================
 	//============ Explorer =====================
@@ -248,6 +260,7 @@
 		"echarts",
 		"cropperjs",
 		"logicflow",
+		"wemake",
 		"vueuse",
 		"zxcvbn",
 		"lintstagedrc",

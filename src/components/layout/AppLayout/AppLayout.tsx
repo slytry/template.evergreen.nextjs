@@ -1,13 +1,18 @@
-import { type ReactElement } from 'react';
+import { type ReactNode } from 'react';
 
-// Import styles from './AppLayout.module.scss';
+import s from './AppLayout.module.scss';
 
-type AppLayoutProps = {
-	children: ReactElement;
+type AppLayoutProp = {
+	children: ReactNode;
 };
 
-const AppLayout = ({ children }: AppLayoutProps) => (
-	<div className={'Layout'}>{children}</div>
-);
+export default function AppLayout({ children }: AppLayoutProp) {
+	return (
+		<div className={s.container}>
+			<header>Header</header>
 
-export { AppLayout };
+			{children}
+			<footer>Footer</footer>
+		</div>
+	);
+}
