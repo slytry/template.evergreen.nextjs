@@ -97,6 +97,7 @@
 	"stylelint.enable": true,
 	"stylelint.validate": ["css", "scss"],
 	"stylelint.packageManager": "pnpm",
+	"eslint.packageManager": "pnpm",
 	"prettier.requireConfig": true,
 	//===========================================
 	//============ Explorer =====================
@@ -153,7 +154,6 @@
 		"[x]",
 		"TODO-APP"
 	],
-	"jest.autoRun": "off",
 	"svg.preview.mode": "svg",
 	//===========================================
 	//============= Files =======================

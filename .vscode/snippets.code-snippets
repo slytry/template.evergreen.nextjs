@@ -60,7 +60,13 @@
 	//===========================================
 	"respond-above": {
 		"prefix": "ra",
-		"body": ["@include respond-above($1) {", "$2", "}"],
+		"body": ["@include respondAbove($1) {", "$2", "}"],
+		"description": "Log output to console",
+		"scope": "scss,sass"
+	},
+	"respond-below": {
+		"prefix": "rb",
+		"body": ["@include respondBelow($1) {", "$2", "}"],
 		"description": "Log output to console",
 		"scope": "scss,sass"
 	},
@@ -104,6 +110,26 @@
 		"prefix": "sx",
 		"description": "Creates clsx react attribute",
 		"body": ["className={clsx('1')}"],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+
+	//===========================================
+	//============= simple ======================
+	//===========================================
+	"addCNImport": {
+		"prefix": "icn",
+		"description": "Creates clsx react attribute",
+		"body": [
+			"import { cn } from '@/services/classNames'",
+			"",
+			"import s from './${TM_FILENAME_BASE}.module.scss';"
+		],
+		"scope": "typescript,typescriptreact,javascript,javascriptreact"
+	},
+	"addCN": {
+		"prefix": "cn",
+		"description": "Creates cn react attribute",
+		"body": ["className={cn($1)}"],
 		"scope": "typescript,typescriptreact,javascript,javascriptreact"
 	}
 }

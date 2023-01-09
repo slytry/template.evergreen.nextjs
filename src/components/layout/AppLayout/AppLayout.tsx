@@ -1,7 +1,7 @@
 import { Inter } from '@next/font/google';
 import { type PropsWithChildren } from 'react';
 
-import { cn } from '@/services/classNames';
+import { cn } from '@/lib/utils/classNames';
 
 import s from './AppLayout.module.scss';
 
