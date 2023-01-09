@@ -1,7 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Temp
+# Tsc
 tsconfig.tsbuildinfo
+
+# vscode
+.vscode/snippets.code-snippets
+
 
 # dependencies
 **/node_modules

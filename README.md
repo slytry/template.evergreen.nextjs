@@ -1,16 +1,21 @@
 # Next.js Ever Green Template
 
-## TODO
+## Growing points
 
-- Мультиязычность - Не удалось подключить типизацию локалей. Не видит react-i18next
+- Обновить структуру папок. Может можно сделать лучше?
+- Написать скрипт обновления зависимостей. Простой update не обновляет major версию
+- lint-staged можно сделать лучше <https://github.com/vercel/next.js/blob/canary/lint-staged.config.js>
+- добавить пример реального запроса. Сделать более сложный API модуль
+
+## Is it necessary?
+
+- Мультиязычность (Не удалось подключить типизацию локалей. Не видит react-i18next)
 - React Query
 - axios
-- classnames
+- classnames (clsx)
 - Storybook
 - Jest
-- Написать скрипт обновления зависимостей
-- Обновить структуру папок
-- lint-staged можно сделать лучше <https://github.com/vercel/next.js/blob/canary/lint-staged.config.js>
+- MSW
 
 ## Как приступить к работе
 
@@ -18,12 +23,6 @@
 
 1. Обновить все зависимости и node.js
 2. Поправить название и автора в package.json
-
-### Запуск проекта
-
-В директории src запустить`pnpm dev`
-Перед MR нужно запустить `pnpm build`, если ничего не упало, то и CI/CD не упадет
-В CI/CD просто запускается команда `npm run build`, в худшем случае версии node.js не совпадают => просить девопсера поднять версию ноды
 
 ## Структура папок
 

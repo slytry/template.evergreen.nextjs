@@ -4,7 +4,7 @@ import { AppLayout } from '@/components/layout/AppLayout';
 
 import '@/styles/main.scss';
 
-const App = ({ Component, pageProps }) => (
+const App = ({ Component, pageProps }: AppProps) => (
 	<AppLayout>
 		<Component {...pageProps} />
 	</AppLayout>

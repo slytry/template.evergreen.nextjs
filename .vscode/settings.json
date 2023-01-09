@@ -1,39 +1,17 @@
 {
 	//===========================================
-	//============= Theme =======================
-	//===========================================
-	"workbench.productIconTheme": "fluent-icons",
-	"workbench.iconTheme": "material-icon-theme",
-	//===========================================
 	//============= Editor ======================
 	//===========================================
 	"editor.wordSeparators": "`~!@#$%^&*()_-=+[{]}\\|;:'\",.<>/?",
-	"editor.quickSuggestions": {
-		"strings": true
-	},
-	"editor.tabSize": 2,
 	"editor.detectIndentation": false,
 	"editor.insertSpaces": false,
-	"editor.linkedEditing": false,
-	"editor.smoothScrolling": true,
-	"editor.cursorBlinking": "expand",
-	"editor.cursorStyle": "line",
-	"editor.cursorWidth": 2,
-	"editor.cursorSmoothCaretAnimation": true,
-	"editor.renderWhitespace": "boundary",
+	"editor.linkedEditing": false, // better Auto Rename Tag ext
 	"editor.wordWrap": "wordWrapColumn",
 	"editor.wordWrapColumn": 100,
-	"editor.mouseWheelZoom": true,
-	"editor.unusualLineTerminators": "auto",
-	"editor.glyphMargin": false,
-	"editor.guides.bracketPairs": true,
-	"editor.minimap.enabled": false,
 	//===========================================
 	//============= Default Linters =============
 	//===========================================
 	"editor.formatOnSave": true,
-	"editor.formatOnPaste": false,
-	"editor.formatOnType": false,
 	"editor.formatOnSaveMode": "file",
 	"editor.codeActionsOnSave": {
 		"source.fixAll.stylelint": true,
@@ -100,61 +78,15 @@
 	"eslint.packageManager": "pnpm",
 	"prettier.requireConfig": true,
 	//===========================================
-	//============ Explorer =====================
-	//===========================================
-	"explorer.confirmDelete": false,
-	"explorer.confirmDragAndDrop": false,
-	"explorer.openEditors.visible": 0,
-	"explorer.compactFolders": false,
-	//===========================================
-	//============ Terminal =====================
-	//===========================================
-	// Ensure enough terminal history is preserved when running tests.
-	"terminal.integrated.scrollback": 10000,
-	//===========================================
 	//============= Other =======================
 	//===========================================
-	"git.enableSmartCommit": true,
-	"git.confirmSync": false,
-	"git.autofetch": true,
 	"npm.packageManager": "pnpm",
-	"debug.javascript.unmapMissingSources": true,
-	"breadcrumbs.enabled": true,
-	"workbench.settings.enableNaturalLanguageSearch": false,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	//===========================================
 	//============= TS ==========================
 	//===========================================
 	"typescript.tsdk": "node_modules\\.pnpm\\typescript@4.9.4\\node_modules\\typescript\\lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.surveys.enabled": false,
-	//===========================================
-	//============= Extensions ==================
-	//===========================================
-	"reactSnippets.settings.typescriptPropsStatePrefix": "interface",
-	"reactSnippets.settings.importReactOnTop": false,
-	"reactSnippets.settings.typescript": true,
-	// Configure todo-tree to exclude node_modules, dist, and compiled.
-	"todo-tree.filtering.excludeGlobs": [
-		"**/node_modules",
-		"**/dist",
-		"**/compiled"
-	],
-	// Match TODO-APP in addition to other TODOs.
-	"todo-tree.general.tags": [
-		"BUG",
-		"HACK",
-		"FIXME",
-		"TODO",
-		"XXX",
-		"[ ]",
-		"[x]",
-		"TODO-APP"
-	],
-	"svg.preview.mode": "svg",
 	//===========================================
 	//============= Files =======================
 	//===========================================
@@ -271,6 +203,8 @@
 		"nextjs",
 		"preinstall",
 		"trivago",
-		"svgr"
+		"svgr",
+		"abouts",
+		"hookform"
 	]
 }
