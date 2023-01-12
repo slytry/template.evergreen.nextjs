@@ -3,10 +3,6 @@
 # Tsc
 tsconfig.tsbuildinfo
 
-# vscode
-.vscode/snippets.code-snippets
-
-
 # dependencies
 **/node_modules
 /.pnp
