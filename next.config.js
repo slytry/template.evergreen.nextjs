@@ -2,6 +2,8 @@
 
 const path = require('path');
 
+const { bindClassnames } = require('./scripts/bindClassnames');
+
 const nextConfig = {
 	reactStrictMode: false,
 	swcMinify: true,
@@ -10,6 +12,8 @@ const nextConfig = {
 		additionalData: '@use "abstract" as *;',
 	},
 	webpack(config) {
+		bindClassnames(config);
+
 		config.module.rules.push({
 			test: /\.svg$/i,
 			issuer: /\.[jt]sx?$/,

@@ -10,7 +10,7 @@ import {
 } from '@radix-ui/react-tooltip';
 import { type ReactNode } from 'react';
 
-import s from './Tooltip.module.scss';
+import cx from './index.module.scss';
 
 export type TooltipProps = {
 	content: ReactNode;
@@ -33,11 +33,11 @@ export function Tooltip({
 					side="top"
 					align="center"
 					sideOffset={5}
-					className={s.content}
+					className={cx('Content')}
 					{...props}
 				>
 					{content}
-					<Arrow width={11} height={5} className={s.arrow} />
+					<Arrow width={11} height={5} className={cx('Arrow')} />
 				</Content>
 			</Root>
 		</Provider>

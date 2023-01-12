@@ -129,7 +129,7 @@
 	},
 	"files.exclude": {
 		"**/.cache": true,
-		"**/.editorconfig": false,
+		"**/.editorconfig": true,
 		"**/.eslintcache": true,
 		"**/bower_components": true,
 		"**/.idea": true,
@@ -139,7 +139,7 @@
 		"**/CVS": true,
 		"**/.DS_Store": true,
 		"**/._.DS_Store": true,
-		"**/node_modules": false,
+		"**/node_modules": true,
 		"**/.next": true,
 		"**/.git": true
 	},

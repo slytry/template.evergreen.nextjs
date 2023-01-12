@@ -43,8 +43,8 @@
 		]
 	},
 	"engines": {
-		"node": ">=18.9",
-		"pnpm": ">=7.2  "
+		"node": ">=18",
+		"pnpm": ">=7.2"
 	},
 	"dependencies": {
 		"@next/font": "^13.1.1",
@@ -53,11 +53,13 @@
 		"@types/node": "^18.11.18",
 		"@types/react": "^18.0.26",
 		"@types/react-dom": "^18.0.10",
+		"classnames": "^2.3.2",
 		"next": "^13.1.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
+		"@ecomfe/class-names-loader": "^2.0.0",
 		"@next/eslint-plugin-next": "^13.1.1",
 		"@radix-ui/react-dropdown-menu": "^2.0.1",
 		"@svgr/webpack": "^6.5.1",
@@ -83,6 +85,12 @@
 	"pnpm": {
 		"overrides": {
 			"json5@<2.2.2": ">=2.2.2"
+		},
+		"peerDependencyRules": {
+			"ignoreMissing": [
+				"babel-loader",
+				"webpack"
+			]
 		}
 	}
 }

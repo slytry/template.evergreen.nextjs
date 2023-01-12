@@ -1,9 +1,7 @@
 import { Inter } from '@next/font/google';
 import { type PropsWithChildren } from 'react';
 
-import { cn } from '@/lib/utils/classNames';
-
-import s from './AppLayout.module.scss';
+import cx from './index.module.scss';
 
 const inter = Inter({
 	variable: '--next-font',
@@ -14,7 +12,7 @@ export function AppLayout({
 	children,
 }: PropsWithChildren<Record<string, unknown>>) {
 	return (
-		<div className={cn(s.container, inter.variable)}>
+		<div className={cx('container', inter.variable)}>
 			<header>Header</header>
 			{children}
 			<footer>Footer</footer>
