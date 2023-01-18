@@ -4,6 +4,7 @@
 
 - Мердж коммит добавить а разрешенные
 - Добавить докер
+- Надо переписывать проверки по коммиту [Precommit Hooks Are Bad](https://www.youtube.com/watch?v=RAelLqnnOp0)
 
 
 ## Growing points
