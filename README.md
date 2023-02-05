@@ -10,6 +10,7 @@
   - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
   - [next-seo](https://github.com/garmeeh/next-seo)
 - bundle analyzer
+- Затянуть из фриланса новую структуру папок для стилей и миксины
 
 ## Growing points
 
