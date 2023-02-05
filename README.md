@@ -10,7 +10,8 @@
   - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
   - [next-seo](https://github.com/garmeeh/next-seo)
 - bundle analyzer
-- Затянуть из фриланса новую структуру папок для стилей и миксины
+- Затянуть из фриланса новую структуру папок для стилей и миксины. Оттуда же забрать облегченные vscode настройки. И надо облегчить рекомендации расширений
+
 
 ## Growing points
 
