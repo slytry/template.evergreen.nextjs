@@ -1,35 +1,11 @@
 {
 	"recommendations": [
-		//Helpers
-		"jock.svg",
-		"oouo-diogo-perdigao.docthis",
-		"formulahendry.auto-rename-tag",
-		// Linters
 		"dbaeumer.vscode-eslint",
 		"stylelint.vscode-stylelint",
 		"esbenp.prettier-vscode",
-		"editorconfig.editorconfig",
 		"davidanson.vscode-markdownlint",
 		"streetsidesoftware.code-spell-checker",
 		"streetsidesoftware.code-spell-checker-russian",
-		// React snippets
-		"dsznajder.es7-react-js-snippets",
-		// Better errors highlighting
 		"usernamehw.errorlens"
-	],
-	"unwantedRecommendations": [
-		// Theme
-		"miguelsolorio.fluent-icons",
-		"pkief.material-icon-theme",
-		// Refactore
-		"wix.glean",
-		// Testing
-		"orta.vscode-jest",
-		// Showing todo comments
-		"gruntfuggly.todo-tree",
-		// Collaborating
-		"ms-vsliveshare.vsliveshare",
-		// Debugging
-		"ms-vscode.vscode-js-profile-flame"
 	]
 }

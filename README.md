@@ -3,14 +3,18 @@
 ## TODO
 
 - Мердж коммит добавить а разрешенные
-- Добавить докер
 - Надо переписывать проверки по коммиту [Precommit Hooks Are Bad](https://www.youtube.com/watch?v=RAelLqnnOp0)
-- Работа с SEO 
-  - https://github.com/stipsan/react-spring-bottom-sheet/blob/main/docs/MetaTags.tsx
-  - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
-  - [next-seo](https://github.com/garmeeh/next-seo)
+- Работа с SEO
+    - <https://github.com/stipsan/react-spring-bottom-sheet/blob/main/docs/MetaTags.tsx>
+    - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
+    - [next-seo](https://github.com/garmeeh/next-seo)
 - bundle analyzer
 - Затянуть из фриланса новую структуру папок для стилей и миксины. Оттуда же забрать облегченные vscode настройки. И надо облегчить рекомендации расширений
+- Мердж коммит добавить в разрешенные
+- Добавить докер + инструкция по развертке на докере
+- Сделать ветку в React-Query
+- Сделать ветку с ослабленныси линтерами для верстки лендосов
+- Добавить генерацию компонентов <https://www.youtube.com/watch?v=9ro7lKAAj2I>
 
 ## Growing points
 
