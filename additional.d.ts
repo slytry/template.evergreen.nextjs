@@ -1,3 +1,7 @@
+/**
+ * В next config разширена настройка webpakc для автоматического биндинга
+ */
+
 declare module '*.module.scss' {
 	import type { ArgumentArray } from 'classnames';
 

@@ -1,12 +1,9 @@
+/* eslint-disable @typescript-eslint/no-confusing-void-expression */
 import { createContext, useContext } from 'react';
 
-import { type DataContextType } from '@/types/http/dataContext.type';
+export const DataContext = createContext(undefined);
 
-export const DataContext = createContext<DataContextType | undefined>(
-	undefined
-);
-
-export const useDataContext = (): DataContextType => {
+export const useDataContext = () => {
 	const context = useContext(DataContext);
 	if (context !== undefined) {
 		return context;
