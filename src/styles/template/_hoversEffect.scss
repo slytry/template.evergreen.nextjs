@@ -1,0 +1,57 @@
+@use '../abstract/mixins/transition' as *;
+@use '../abstract/mixins/hover' as *;
+
+@mixin scaleHover($scale: 1.1) {
+	@include transition(transform);
+	display: block;
+	@include accessHover {
+		transform: scale($scale);
+	}
+}
+
+@mixin inverHover {
+	$inverHoverDuration: 0.2s;
+	@include transition(filter, $inverHoverDuration);
+	@include accessHover {
+		filter: invert(100%);
+	}
+}
+@mixin darkenHover($brightnes: 0.7) {
+	@include transition(filter);
+	@include accessHover {
+		filter: brightness($brightnes);
+	}
+}
+
+@mixin underlineStrokeHover($colorBg: #aaa) {
+	$underlineStrokDuration: 0.3s;
+	@include transition(all, $underlineStrokDuration);
+	display: block;
+	position: relative;
+	width: fit-content;
+	@include accessHover {
+		filter: brightness(1.3);
+	}
+
+	@include accessHoverAfter {
+		width: 100%;
+	}
+
+	&::after {
+		background: $colorBg;
+		bottom: 0;
+		color: transparent;
+		content: '.';
+		height: 1px;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		width: 0%;
+	}
+
+	&::after,
+	&::before {
+		@include transition(all, $underlineStrokDuration);
+	}
+}

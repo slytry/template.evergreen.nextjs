@@ -1,0 +1,41 @@
+@mixin buildPosition($position, $args: (), $zindex: ()) {
+	$offsets: top right bottom left;
+	position: $position;
+	@each $offset in $offsets {
+		$index: index($args, $offset);
+		@if $index {
+			@if $index == length($args) {
+				#{$offset}: 0;
+			} @else {
+				$next: nth($args, $index + 1);
+				@if is-valid-length($next) {
+					#{$offset}: $next;
+				} @else if index($offsets, $next) {
+					#{$offset}: 0;
+				} @else {
+					@warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+				}
+			}
+		}
+	}
+	@if $zindex != '' {
+		z-index: $zindex;
+	}
+}
+
+@mixin absolute($args: (), $zindex: '') {
+	@include buildPosition(absolute, $args, $zindex);
+}
+
+@mixin fixed($args: (), $zindex: '') {
+	@include buildPosition(fixed, $args, $zindex);
+}
+
+@mixin relative($args: (), $zindex: '') {
+	@include buildPosition(relative, $args, $zindex);
+}
+
+//example usage:
+// @include absolute(top -2px left -2px, 3);
+// @include absolute(top -10px left 10%, 150);
+// @include fixed(bottom 10px right 50px, 11);

@@ -5,7 +5,7 @@ import axios, {
 	type AxiosResponse,
 } from 'axios';
 
-import { HttpStatusCodes } from './HttpStatusCode';
+import { HttpStatusCodes } from '../constants/HttpStatusCode';
 
 export const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 

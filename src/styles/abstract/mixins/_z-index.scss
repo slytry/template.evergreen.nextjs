@@ -1,0 +1,24 @@
+$zIndexedItems: (
+	'global': (
+		'footer',
+		'header',
+	),
+);
+
+$zIndexMap: ();
+$counter: 1;
+
+@each $item in $zIndexedItems {
+	$zIndexMap: map-merge(
+		$zIndexMap,
+		(
+			$item: $counter,
+		)
+	);
+	$counter: $counter + 1;
+}
+
+/* stylelint-disable-next-line scss/at-mixin-pattern */
+@mixin z($key) {
+	z-index: map-get($zIndexMap, $key);
+}

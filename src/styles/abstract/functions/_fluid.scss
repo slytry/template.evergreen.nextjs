@@ -1,27 +1,5 @@
 @use 'sass:math';
-@use './utils' as *;
-
-//===========================================
-//============= Media =======================
-//===========================================
-
-@mixin respondAbove($breakpoint) {
-	@media only screen and (min-width: $breakpoint) {
-		@content;
-	}
-}
-
-@mixin respondBelow($breakpoint) {
-	@media only screen and (max-width: $breakpoint) {
-		@content;
-	}
-}
-
-@mixin respondBetween($lower, $upper) {
-	@media (min-width: $lower) and (max-width: $upper) {
-		@content;
-	}
-}
+@use './decimalRound' as *;
 
 //===========================================
 //============= fluid =======================

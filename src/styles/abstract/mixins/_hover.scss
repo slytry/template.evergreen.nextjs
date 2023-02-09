@@ -1,0 +1,27 @@
+@mixin accessHover() {
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@media (pointer: coarse) {
+		&:hover:active {
+			@content;
+		}
+	}
+}
+
+@mixin accessHoverAfter() {
+	@media (hover: hover) and (pointer: fine) {
+		&:hover::after {
+			@content;
+		}
+	}
+
+	@media (pointer: coarse) {
+		&:hover:active::after {
+			@content;
+		}
+	}
+}

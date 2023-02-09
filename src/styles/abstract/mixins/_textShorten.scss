@@ -1,0 +1,18 @@
+//===========================================
+//============= textShorten =================
+//===========================================
+
+@mixin textShorten($numLines: 1) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	@supports (-webkit-line-clamp: $numLines) {
+		-webkit-box-orient: vertical;
+		display: box;
+		-webkit-line-clamp: $numLines;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: initial;
+	}
+}
