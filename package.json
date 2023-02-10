@@ -15,7 +15,8 @@
 		"type-check": "tsc --noEmit --skipLibCheck",
 		"preinstall": "node ./scripts/preinstall.js",
 		"postinstall": "simple-git-hooks",
-		"nc": "generate-react component"
+		"nc": "generate-react component",
+		"analyze": "cross-env ANALYZE=true next build"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint-staged",
@@ -48,6 +49,7 @@
 		"pnpm": ">=7.2"
 	},
 	"dependencies": {
+		"@next/bundle-analyzer": "^13.1.6",
 		"@next/font": "^13.1.1",
 		"@radix-ui/react-tooltip": "^1.0.2",
 		"@reach/auto-id": "^0.18.0",
@@ -56,6 +58,7 @@
 		"@types/react-dom": "^18.0.10",
 		"axios": "^1.2.2",
 		"classnames": "^2.3.2",
+		"cross-env": "^7.0.3",
 		"html-react-parser": "^3.0.7",
 		"next": "^13.1.1",
 		"react": "^18.2.0",
