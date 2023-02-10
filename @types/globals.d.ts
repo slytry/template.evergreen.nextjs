@@ -15,4 +15,11 @@ declare global {
 	interface CNProp {
 		className?: string;
 	}
+
+	interface I18nNamespaces {
+		common: typeof common;
+		footer: typeof footer;
+		second: typeof secondPage;
+		'404': typeof errorPage;
+	}
 }

@@ -1,0 +1,11 @@
+
+{
+  "header": "A simple header",
+  "back-to-home": "Back to home",
+  "error-with-status": "A {{statusCode}} error occurred on server",
+  "error-without-status": "An error occurred on the server",
+  "h1": "A simple example",
+  "title": "Home | next-i18next",
+  "to-second-page": "To second page",
+	"description": "This is not a page component that requires its own namespace"
+}

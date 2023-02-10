@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/components/*"]
 		},
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
@@ -25,7 +25,7 @@
 		]
 	},
 	"include": [
-		"./additional.d.ts",
+		"./@types/*",
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",

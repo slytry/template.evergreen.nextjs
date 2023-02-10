@@ -1,5 +1,5 @@
 /**
- * В next config разширена настройка webpakc для автоматического биндинга
+ * В next config разширена настройка webpack для автоматического биндинга
  */
 
 declare module '*.module.scss' {

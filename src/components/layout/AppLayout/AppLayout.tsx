@@ -1,6 +1,9 @@
 import { Inter } from '@next/font/google';
 import { type PropsWithChildren } from 'react';
 
+import { Footer } from './Footer';
+import { Header } from './Header';
+
 import cx from './index.module.scss';
 
 const inter = Inter({
@@ -8,14 +11,12 @@ const inter = Inter({
 	subsets: ['latin', 'cyrillic'],
 });
 
-export function AppLayout({
-	children,
-}: PropsWithChildren<Record<string, unknown>>) {
+export function AppLayout({ children }: PropsWithChildren) {
 	return (
 		<div className={cx('container', inter.variable)}>
-			<header>Header</header>
+			<Header />
 			{children}
-			<footer>Footer</footer>
+			<Footer />
 		</div>
 	);
 }

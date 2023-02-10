@@ -2,30 +2,26 @@
 
 ## TODO
 
-- Надо переписывать проверки по коммиту [Precommit Hooks Are Bad](https://www.youtube.com/watch?v=RAelLqnnOp0)
 - Работа с SEO
     - <https://github.com/stipsan/react-spring-bottom-sheet/blob/main/docs/MetaTags.tsx>
     - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
     - [next-seo](https://github.com/garmeeh/next-seo)
-- bundle analyzer
 - Добавить докер + инструкция по развертке на докере
 - Сделать ветку в React-Query
+
+## Спорные ESLINT правила
+
+- // eslint-disable-next-line react-hooks/exhaustive-deps
+- // @typescript-eslint/no-floating-promises
+- // eslint-disable no-warning-comments
 
 ## Growing points
 
 - Продумать систему дизайн токенов
-- Продумать как называть переменные для цветов и какое цветовое простанство использовать
-- Обновить структуру папок. Может можно сделать лучше, но надо ресерч делать)
+    - Продумать как называть переменные для цветов и какое цветовое простанство использовать
+    - Обновить структуру папок. Может можно сделать лучше, но надо ресерч делать)
 - Написать скрипт обновления зависимостей. Простой update не обновляет major версию
-- lint-staged можно сделать лучше <https://github.com/vercel/next.js/blob/canary/lint-staged.config.js>
-
-## Is it necessary?
-
-- Мультиязычность (Не удалось подключить типизацию локалей. Не видит react-i18next)
-- React Query
-- Storybook
-- Jest
-- MSW
+- lint-staged можно сделать лучше <https://github.com/vercel/next.js/blob/canary/lint-staged.config.js> (убрать его на CI/CD, [Precommit Hooks Are Bad](https://www.youtube.com/watch?v=RAelLqnnOp0) )
 
 ## Как приступить к работе
 
