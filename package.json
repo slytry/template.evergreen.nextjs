@@ -16,7 +16,8 @@
 		"preinstall": "node ./scripts/preinstall.js",
 		"postinstall": "simple-git-hooks",
 		"nc": "generate-react component",
-		"analyze": "cross-env ANALYZE=true next build"
+		"analyze": "cross-env ANALYZE=true next build",
+		"pushall": "git push gh && git push ch"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint-staged",
