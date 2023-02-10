@@ -12,7 +12,7 @@
 		"format": "prettier --write .",
 		"stylelint": "stylelint \"**/*.scss\" --fix",
 		"lint": "next lint",
-		"type-check": "tsc --noEmit --skipLibCheck",
+		"typecheck": "tsc --noEmit --skipLibCheck",
 		"preinstall": "node ./scripts/preinstall.js",
 		"postinstall": "simple-git-hooks",
 		"nc": "generate-react component",
@@ -23,7 +23,7 @@
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint-staged",
 		"commit-msg": "node scripts/verifyCommit.mjs",
-		"pre-push": " pnpm type-check"
+		"pre-push": "pnpm typecheck"
 	},
 	"lint-staged": {
 		"*.scss": "stylelint --fix",

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 export const Footer = () => {
 	const router = useRouter();
-	const { t } = useTranslation('footer');
+	const { t } = useTranslation(['footer']);
 
 	return (
 		<footer>

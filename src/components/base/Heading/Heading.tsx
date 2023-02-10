@@ -3,7 +3,7 @@ import React, { type HTMLAttributes, useContext } from 'react';
 import {
 	HeadingIdContext,
 	HeadingLevelContext,
-} from '@/context/HeadingContext';
+} from 'src/context/HeadingContext';
 
 import cx from './index.module.scss';
 
