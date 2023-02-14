@@ -1,6 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { DEFAULT_LOCALE } from 'next-i18next.config';
+import { DEFAULT_LOCALE } from '../constants/locales';
 
 interface GetStaticPropsContextReduced {
 	params?: any;

@@ -1,9 +1,9 @@
 import { type GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { HomePage } from '@/pages/Home';
+import { DEFAULT_LOCALE } from 'src/lib/constants/locales';
 
-import { DEFAULT_LOCALE } from '../next-i18next.config';
+import { HomePage } from '@/pages/Home';
 
 const Home = () => <HomePage />;
 

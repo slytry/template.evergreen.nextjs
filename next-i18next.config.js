@@ -1,6 +1,12 @@
-export const DEFAULT_LOCALE = 'ru';
+// @ts-check
+
+// TODO: переменные с локалями дублируются в lib/constans/locales. Не понятно разрулить два разных виды модулей
+const DEFAULT_LOCALE = 'ru';
 const LOCALES = ['ru', 'en'];
 
+/**
+ * @type {import('next-i18next').UserConfig}
+ */
 module.exports = {
 	// https://www.i18next.com/overview/configuration-options#logging
 

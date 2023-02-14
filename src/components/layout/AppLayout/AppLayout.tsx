@@ -1,4 +1,5 @@
 import { Inter } from '@next/font/google';
+import Head from 'next/head';
 import { type PropsWithChildren } from 'react';
 
 import { Footer } from './Footer';
@@ -14,6 +15,11 @@ const inter = Inter({
 export function AppLayout({ children }: PropsWithChildren) {
 	return (
 		<div className={cx('container', inter.variable)}>
+			<Head>
+				<title>Create Next App</title>
+				<meta name="description" content="Chulakov template next js" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<Header />
 			{children}
 			<Footer />
