@@ -9,7 +9,7 @@ interface IPage {
 	data: Array<{ email: string; id: number }>;
 }
 
-const InfinityScrollPosts = () => {
+const InfiniteScrollPosts = () => {
 	const { data, isSuccess, hasNextPage, fetchNextPage, isLoading } =
 		useInfiniteQuery('users', async ({ pageParam = 1 }) => getData(pageParam), {
 			getNextPageParam(lastPage, allPages) {
@@ -57,4 +57,4 @@ const InfinityScrollPosts = () => {
 	);
 };
 
-export default InfinityScrollPosts;
+export default InfiniteScrollPosts;

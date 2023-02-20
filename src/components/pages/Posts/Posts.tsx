@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-import InfinityScrollPosts from './InfinityScrollPosts';
+import InfiniteScrollPosts from './InfinityScrollPosts';
 
 import cx from './index.module.scss';
 
 const Posts = () => {
-	const [listMode, setListMode] = useState<'infinity' | 'pagination'>(
-		'infinity'
+	const [listMode, setListMode] = useState<'infinite' | 'pagination'>(
+		'infinite'
 	);
 	return (
 		<>
@@ -14,7 +14,7 @@ const Posts = () => {
 				<button
 					className={cx('navButton')}
 					onClick={() => {
-						setListMode('infinity');
+						setListMode('infinite');
 					}}
 				>
 					Endless Scroll
@@ -28,8 +28,8 @@ const Posts = () => {
 					Pagination
 				</button>
 			</div>
-			{listMode === 'infinity' ? (
-				<InfinityScrollPosts />
+			{listMode === 'infinite' ? (
+				<InfiniteScrollPosts />
 			) : (
 				<div>Pagination</div>
 			)}
