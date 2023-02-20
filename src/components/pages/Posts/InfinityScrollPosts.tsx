@@ -19,8 +19,8 @@ const InfinityScrollPosts = () => {
 		});
 	useEffect(() => {
 		let fetching = false;
-		const handleScroll: EventListener = async (e: Event) => {
-			const target: Document = e.target as Document;
+		const handleScroll = async (e: Event) => {
+			const target = e.target as Document;
 
 			if (!target.scrollingElement) {
 				return;
