@@ -1,0 +1,9 @@
+@import '../variables';
+
+@mixin navButton {
+	background-color: $gray;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 5px;
+	padding: 5px;
+}

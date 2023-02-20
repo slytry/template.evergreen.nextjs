@@ -67,7 +67,8 @@
 		"next-i18next": "^13.1.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-i18next": "^12.1.5"
+		"react-i18next": "^12.1.5",
+		"react-query": "^3.39.3"
 	},
 	"devDependencies": {
 		"@ecomfe/class-names-loader": "^2.0.0",

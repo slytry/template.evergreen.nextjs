@@ -14,15 +14,17 @@ const inter = Inter({
 
 export function AppLayout({ children }: PropsWithChildren) {
 	return (
-		<div className={cx('container', inter.variable)}>
+		<>
 			<Head>
 				<title>Create Next App</title>
 				<meta name="description" content="Chulakov template next js" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Header />
-			{children}
-			<Footer />
-		</div>
+			<div className={cx('container', inter.variable)}>
+				<Header />
+				<main>{children}</main>
+				<Footer />
+			</div>
+		</>
 	);
 }
