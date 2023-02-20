@@ -1,6 +1,4 @@
-@import '../variables';
-
-@mixin navButton {
+.Root {
 	background-color: $gray;
 	border-radius: 4px;
 	cursor: pointer;
