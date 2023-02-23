@@ -27,7 +27,7 @@ export const makeStaticProps =
 		props: await getI18nProps(ctx, ns),
 	});
 
-// TODO: Надо сделать типизацию для ns параметра. Начал делать не смог. Текущая реализация требует всех ключей сразу
+// TODO: Надо сделать типизацию для ns параметра. Начал делать, но не смог. Текущая реализация требует всех ключей сразу
 
 // import { type TupleUnion } from 'src/types/utils.types';
 // type AllowedFields = TupleUnion<keyof I18nNamespaces>;

@@ -5,6 +5,7 @@ export const DataContext = createContext(undefined);
 
 export const useDataContext = () => {
 	const context = useContext(DataContext);
+
 	if (context !== undefined) {
 		return context;
 	}

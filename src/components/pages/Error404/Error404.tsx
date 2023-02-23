@@ -8,9 +8,7 @@ export const Error404 = () => {
 		<>
 			<main>
 				<div>
-					<Link href="/">
-						<button type="button">{t('common:back-to-home')}</button>
-					</Link>
+					<Link href="/">{t('common:back-to-home')}</Link>
 				</div>
 			</main>
 		</>
