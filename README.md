@@ -7,10 +7,12 @@
     - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
     - [next-seo](https://github.com/garmeeh/next-seo)
 - Добавить докер + инструкция по развертке на докере
-- Сделать ветку в React-Query
-- добавить мейлер
-- убрать radix
+- добавить мейлер (Это с Артуром надо пообщаться, он делал)
+
+### Стажер Дмитрий занимается 23.02.2023
+
 - сделать пару секций
+- Сделать ветку в React-Query
 
 ## Спорные ESLINT правила
 
