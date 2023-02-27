@@ -7,7 +7,7 @@
     - [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
     - [next-seo](https://github.com/garmeeh/next-seo)
 - Добавить докер + инструкция по развертке на докере
-- Сделать ветку в React-Query
+- Сделать вет в React-Query
 
 ## Спорные ESLINT правила
 
@@ -22,6 +22,7 @@
     - Обновить структуру папок. Может можно сделать лучше, но надо ресерч делать)
 - Написать скрипт обновления зависимостей. Простой update не обновляет major версию
 - lint-staged можно сделать лучше <https://github.com/vercel/next.js/blob/canary/lint-staged.config.js> (убрать его на CI/CD, [Precommit Hooks Are Bad](https://www.youtube.com/watch?v=RAelLqnnOp0) )
+- Дима сказал есть проблемы c makeStaticProps надо посмотреть
 
 ## Как приступить к работе
 
